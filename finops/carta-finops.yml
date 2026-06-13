@@ -1,0 +1,110 @@
+name: Carta API FinOps Framework
+description: >-
+  FinOps guidance for organizations consuming the Carta API. Carta's API
+  is priced via negotiated partner agreements rather than public pay-per-call
+  metering. Cost governance therefore focuses on subscription tier management,
+  usage monitoring against rate limits, and ensuring API consumption aligns
+  with the equity data use cases covered by the partner agreement.
+specificationVersion: '1.0'
+framework: FinOps Framework FOCUS-aligned
+
+capabilities:
+
+  - domain: Understand
+    practices:
+      - name: API Usage Visibility
+        description: >-
+          Instrument OAuth application call volumes against the documented
+          rate limits (5 req/s burst, 150 req/min sustained in sandbox;
+          production limits per agreement). Use application-level logging
+          to track per-endpoint consumption across Launch, Investor, Issuer,
+          Portfolio, and CRM API suites.
+        maturity: Crawl
+
+      - name: Cost Attribution
+        description: >-
+          Carta API costs are embedded in partner subscription agreements
+          (negotiated, stakeholder-count-based pricing). Map API usage to
+          internal business units or products that consume each API suite
+          to enable accurate internal chargeback or showback.
+        maturity: Crawl
+
+  - domain: Optimize
+    practices:
+      - name: Rate Limit Optimization
+        description: >-
+          Implement request queuing and exponential back-off to avoid
+          exceeding rate limits and triggering throttle errors, which add
+          latency and operational overhead. Cache endpoint responses per
+          published TTLs to reduce redundant API calls and associated
+          costs.
+        maturity: Walk
+
+      - name: Scope Minimization
+        description: >-
+          Request only the OAuth scopes needed for each integration. Narrow
+          scopes reduce the security surface and may simplify compliance
+          obligations (SOC 2 Type 2 requirement for partners), indirectly
+          lowering audit and remediation costs.
+        maturity: Walk
+
+      - name: Environment Tiering
+        description: >-
+          Use the Carta mock environment (mock-api.carta.com) for all
+          development and QA activity to avoid consuming production API
+          quota. Reserve production credentials for live workloads.
+        maturity: Crawl
+
+  - domain: Operate
+    practices:
+      - name: Subscription Tier Right-Sizing
+        description: >-
+          Carta partner pricing is based on stakeholder count and plan tier.
+          Periodically review actual equity stakeholder data volumes against
+          the contracted tier to identify over- or under-provisioning and
+          renegotiate accordingly.
+        maturity: Run
+
+      - name: Status and Incident Monitoring
+        description: >-
+          Subscribe to the Carta status page (https://status.carta.com) for
+          incident and maintenance notifications. Factor historical uptime
+          (99.96% for app.carta.com over 90 days as of June 2026) into SLA
+          commitments for downstream consumers of Carta API data.
+        maturity: Walk
+
+      - name: SOC 2 Compliance Cost
+        description: >-
+          Maintaining SOC 2 Type 2 certification is a hard requirement for
+          third-party partner API access. Budget for annual SOC 2 audit costs
+          as an indirect cost of Carta API access when calculating total
+          cost of ownership.
+        maturity: Walk
+
+costDrivers:
+  - name: Partner Subscription
+    type: fixed
+    description: >-
+      Negotiated annual or multi-year subscription fee based on stakeholder
+      count and plan tier. Contact partners@carta.com for current pricing.
+  - name: SOC 2 Compliance
+    type: indirect
+    description: >-
+      Annual third-party audit required for partner API access. Costs vary
+      by organization size and audit firm.
+  - name: Engineering Integration
+    type: one-time
+    description: >-
+      Initial and ongoing engineering effort to implement OAuth 2.0 flows,
+      handle rate limit back-off, process API responses, and maintain
+      the integration as Carta's API evolves.
+
+links:
+  - name: Carta Plans & Pricing
+    url: https://carta.com/plans/pricing-for-investors/
+  - name: Carta Partner Program
+    url: https://carta.com/partners/partner-resources/
+  - name: Carta Status Page
+    url: https://status.carta.com
+  - name: Carta API Introduction
+    url: https://docs.carta.com/api-platform/docs/introduction

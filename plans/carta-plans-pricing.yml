@@ -1,0 +1,68 @@
+name: Carta API Plans and Pricing
+description: >-
+  Carta's API access model is geared toward partners and Carta platform
+  customers. Third-party partners require an invitation and a valid SOC 2
+  Type 2 certification. Existing Carta customers (companies and investment
+  firms) may request API access to their own data on demand. Public pricing
+  for API access is not published; partners are directed to contact
+  partners@carta.com for commercial terms. Playground / mock environment
+  access is available without credentials via mock-api.carta.com.
+specificationVersion: '0.1'
+plans:
+  - name: Customer Self-Service
+    description: >-
+      Carta platform customers (companies, investment firms) can request API
+      access to consume their own Carta data on demand. This access is tied
+      to their existing Carta subscription and does not require a separate
+      API pricing tier.
+    access: on-demand
+    requiresExistingSubscription: true
+    apiSuites:
+      - Issuer API
+      - Investor API
+      - Portfolio API
+    authMethods:
+      - OAuth 2.0 Authorization Code Flow
+      - OAuth 2.0 Client Credentials Flow
+    mockEnvironmentURL: https://mock-api.carta.com
+
+  - name: Partner Program (Invite-Only)
+    description: >-
+      Third-party partners wishing to consume Carta data on behalf of shared
+      customers must apply to the partner program. As of 2025, access is
+      invite-only and requires a valid SOC 2 Type 2 certification. Commercial
+      pricing is negotiated directly with Carta's partner team.
+    access: invite-only
+    certificationRequired: SOC 2 Type 2
+    contact: partners@carta.com
+    apiSuites:
+      - Launch API
+      - Investor API
+      - Issuer API
+      - Portfolio API
+      - CRM API
+    authMethods:
+      - OAuth 2.0 Authorization Code Flow
+      - OAuth 2.0 Client Credentials Flow
+      - OpenID Connect
+    mockEnvironmentURL: https://mock-api.carta.com
+
+  - name: Playground / Sandbox
+    description: >-
+      A mocking service is available to all developers at mock-api.carta.com
+      for experimentation and integration development without requiring
+      production credentials or partner approval.
+    access: open
+    requiresCredentials: false
+    rateLimits:
+      requestsPerSecond: 5
+      requestsPerMinute: 150
+    mockEnvironmentURL: https://mock-api.carta.com
+
+pricing:
+  model: negotiated
+  publicPricingURL: https://carta.com/plans/pricing-for-investors/
+  notes: >-
+    Specific API pricing is not publicly listed. Partner pricing is based on
+    stakeholder count and plan tier and is negotiated through the partner team.
+    Refer to https://carta.com/plans/ for general platform pricing.

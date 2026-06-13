@@ -1,0 +1,50 @@
+name: Carta API Rate Limits
+description: >-
+  Carta's API enforces rate limits to ensure platform stability and fair
+  access across all integrated partners. Documented limits apply to OAuth
+  app-level traffic. Specific production rate limit tiers are not publicly
+  disclosed; the values below reflect published playground / sandbox limits
+  and available partner documentation.
+specificationVersion: '0.1'
+rateLimits:
+  - environment: Playground / Sandbox
+    scope: per OAuth application
+    limits:
+      - type: burst
+        value: 5
+        unit: requests per second
+        description: Maximum burst rate per OAuth application in the sandbox environment.
+      - type: sustained
+        value: 150
+        unit: requests per minute
+        description: Sustained rate limit per OAuth application in the sandbox environment.
+    notes: >-
+      Partners can burst to 5 requests per second per OAuth app, with a
+      sustained limit of 150 requests per minute in the playground environment.
+
+  - environment: Production
+    scope: per OAuth application
+    limits: []
+    notes: >-
+      Production rate limit values are not publicly documented. Partners
+      should consult their Carta partner agreement or contact
+      partners@carta.com for production throttle thresholds. Endpoints
+      also carry individual TTL (Time-To-Live) cache windows — see the
+      Endpoints & TTLs reference in Carta docs for per-resource caching
+      behavior.
+
+headers:
+  - name: Retry-After
+    description: >-
+      Returned when a rate limit is exceeded. Indicates the number of seconds
+      the client should wait before retrying the request.
+  - name: X-RateLimit-Limit
+    description: The maximum number of requests allowed per time window.
+  - name: X-RateLimit-Remaining
+    description: The number of requests remaining in the current time window.
+  - name: X-RateLimit-Reset
+    description: The Unix timestamp at which the current time window resets.
+
+documentation:
+  rateLimitsURL: https://docs.carta.com/api-platform/docs/introduction
+  endpointTTLsURL: https://docs.carta.com/api-platform/docs/introduction
