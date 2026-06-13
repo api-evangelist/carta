@@ -1,0 +1,82 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "carta": "https://carta.com/vocab#",
+    "aid": "carta:aid",
+    "capTable": "carta:capTable",
+    "equityPlan": "carta:equityPlan",
+    "valuation409A": "carta:valuation409A",
+    "fundAdministration": "carta:fundAdministration",
+    "investorPortfolio": "carta:investorPortfolio",
+    "mockApi": "carta:mockApi",
+    "securityType": "carta:securityType",
+    "stakeholder": "carta:stakeholder",
+    "vestingSchedule": "carta:vestingSchedule"
+  },
+  "@type": "Organization",
+  "name": "Carta",
+  "url": "https://carta.com",
+  "description": "Carta is an equity management platform offering a REST API for cap table management, 409A valuations, fund administration, employee equity plans, and investor portfolio management.",
+  "sameAs": [
+    "https://github.com/carta",
+    "https://www.linkedin.com/company/carta--",
+    "https://x.com/cartainc"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Carta Developer Platform",
+    "description": "Four API suites — Launch, Investor, Issuer, and Portfolio — authenticated via OAuth 2.0.",
+    "url": "https://docs.carta.com/api-platform/docs/introduction",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "name": "Carta Launch API",
+        "description": "Enables incorporation partners and law firms to programmatically onboard new companies onto the Carta platform.",
+        "category": "Incorporation, Company Onboarding, Cap Table"
+      },
+      {
+        "@type": "Offer",
+        "name": "Carta Investor API",
+        "description": "Permits fund operators to retrieve cap table summaries and portfolio position data for their holdings.",
+        "category": "Investor, Portfolio, Cap Table, Fund Management"
+      },
+      {
+        "@type": "Offer",
+        "name": "Carta Issuer API",
+        "description": "Allows law firms and technology partners to retrieve cap table data on behalf of companies.",
+        "category": "Issuer, Cap Table, 409A, Legal"
+      },
+      {
+        "@type": "Offer",
+        "name": "Carta Portfolio API",
+        "description": "Enables personal finance and wealth management platforms to aggregate equity holdings data for individuals.",
+        "category": "Portfolio, Personal Finance, Wealth Management, Equity Holdings"
+      },
+      {
+        "@type": "Offer",
+        "name": "Carta CRM API",
+        "description": "Facilitates deal and fundraising relationship management across investment processes for fund operators.",
+        "category": "CRM, Fundraising, Deal Management, Fund"
+      }
+    ]
+  },
+  "potentialAction": {
+    "@type": "ReadAction",
+    "target": "https://docs.carta.com/api-platform/docs/introduction",
+    "name": "Carta Developer Documentation"
+  },
+  "provider": {
+    "@type": "Service",
+    "name": "Carta Developer Platform",
+    "serviceType": "REST API",
+    "termsOfService": "https://carta.com/legal/",
+    "areaServed": "Global",
+    "availableChannel": {
+      "@type": "ServiceChannel",
+      "serviceUrl": "https://api.carta.com",
+      "serviceSmsNumber": null,
+      "name": "Carta REST API",
+      "description": "Partner-gated REST API requiring SOC 2 Type 2 certification; sandbox available at mock-api.carta.com."
+    }
+  }
+}
