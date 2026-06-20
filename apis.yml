@@ -10,7 +10,7 @@ description: >-
   may request access to their own data on demand. A mock API environment at
   mock-api.carta.com is provided for sandbox development.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/carta/refs/heads/main/apis.yml
 created: '2026-06-13'
 modified: '2026-06-13'
