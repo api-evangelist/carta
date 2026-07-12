@@ -110,6 +110,10 @@ apis:
         url: https://docs.carta.com/api-platform/docs/introduction
 
 common:
+  - type: TrustCenter
+    url: security/carta-trust-center.yml
+  - type: DomainSecurity
+    url: security/carta-domain-security.yml
   - type: Website
     url: https://carta.com
   - type: Documentation
