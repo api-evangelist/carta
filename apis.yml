@@ -35,6 +35,15 @@ tags:
   - Employee Equity
   - Investor Portfolio
   - Private Markets
+  - Fintech
+tags_raw:
+  - Equity Management
+  - Cap Table
+  - 409A Valuations
+  - Fund Administration
+  - Employee Equity
+  - Investor Portfolio
+  - Private Markets
   - FinTech
 apis:
   - aid: carta:launch-api
