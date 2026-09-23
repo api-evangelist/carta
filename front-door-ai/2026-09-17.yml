@@ -1,0 +1,30 @@
+# Front Door AI Index — carta — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: carta
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: carta.com
+  final_host: carta.com
+  ownership: own
+  owner: carta
+  shares_host_with: null
+  inherited_from: null
+  verdict: scored
+  score: 21
+  host_score: 21
+  density: 13.14
+  words: 1598
+  tiers:
+    agentic: 2
+    core: 12
+    model: 7
+  ambiguous: 8
+  top_terms:
+    AI: 12
+    Claude: 7
+    agent: 6
+    agentic: 2
+    automation: 1
+    intelligence: 1
