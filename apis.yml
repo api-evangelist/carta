@@ -50,6 +50,7 @@ tags:
   - Investor Portfolio
   - Private Markets
   - Fintech
+  - Startups
 tags_raw:
   - Equity Management
   - Cap Table
@@ -59,6 +60,7 @@ tags_raw:
   - Investor Portfolio
   - Private Markets
   - FinTech
+  - Startups
 apis:
   - aid: carta:launch-api
     name: Carta Launch API
