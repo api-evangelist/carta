@@ -70,3 +70,27 @@ pricing:
     Specific API pricing is not publicly listed. Partner pricing is based on
     stakeholder count and plan tier and is negotiated through the partner team.
     Refer to https://carta.com/plans/ for general platform pricing.
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models: []
+  units: []
+  plans:
+  - name: Customer Self-Service
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Partner Program (Invite-Only)
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Playground / Sandbox
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
