@@ -6,23 +6,6 @@ checked:
 source:
 - bamboohr/integrations/bamboohr-integration-edges.yml
 edges:
-- partner_name: BambooHR (own)
-  partner: bamboohr
-  partner_match: mirror
-  mirror_match: domain
-  type: marketplace
-  relationship: platform-app
-  direction: third-party
-  channel: partner-built
-  marketplace: own
-  evidence: https://www.bamboohr.com/integrations/listings/carta
-  mirror_of: bamboohr/integrations/bamboohr-integration-edges.yml
-  apps:
-  - Carta
-  listing_count: 1
-  detected: '2026-10-14'
-  detected_by: mirror-platform-listings.py
-  category: Compensation Software
 - partner_name: ISO 10383 (MIC)
   partner: null
   type: register
@@ -55,3 +38,20 @@ edges:
     detected: '2026-10-15'
   detected_by: sweep-capital-markets.py
   first_seen: '2026-10-15'
+- partner_name: BambooHR (own)
+  partner: bamboohr
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://www.bamboohr.com/integrations/listings/carta
+  mirror_of: bamboohr/integrations/bamboohr-integration-edges.yml
+  apps:
+  - Carta
+  listing_count: 1
+  detected: '2026-10-14'
+  detected_by: mirror-platform-listings.py
+  category: Compensation Software
