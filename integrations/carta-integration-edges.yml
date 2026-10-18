@@ -3,6 +3,7 @@ method: searched
 checked:
 - bamboohr/integrations/bamboohr-integration-edges.yml
 - https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv
+- zoom/integrations/zoom-integration-edges.yml
 source:
 - bamboohr/integrations/bamboohr-integration-edges.yml
 edges:
@@ -55,3 +56,20 @@ edges:
   detected: '2026-10-14'
   detected_by: mirror-platform-listings.py
   category: Compensation Software
+- partner_name: Zoom (own)
+  partner: zoom
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://marketplace.zoom.us/apps/ZQG4muqGRDubvAOf-l_NDw
+  mirror_of: zoom/integrations/zoom-integration-edges.yml
+  apps:
+  - Carta CRM
+  listing_count: 1
+  detected: '2026-10-18'
+  detected_by: mirror-platform-listings.py
+  category: Zoom app

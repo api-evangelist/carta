@@ -48,3 +48,16 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
+- slug: carta-zoom-own
+  label: Zoom (own)
+  partner: zoom
+  partner_name: Zoom (own)
+  category: Zoom app
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://marketplace.zoom.us/apps/ZQG4muqGRDubvAOf-l_NDw
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
