@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/carta/main/json-schema/carta-get-v1-alpha1-issuers-issuerid-transactions-response-schema.json",
+  "title": "GetV1Alpha1IssuersIssueridTransactionsResponse",
+  "x-generated": "2026-10-20",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/carta-openapi-generated.yml#/components/schemas/GetV1Alpha1IssuersIssueridTransactionsResponse",
+  "type": "object",
+  "properties": {
+    "transactions": {
+      "type": "string",
+      "description": "Transaction history for securities"
+    }
+  }
+}

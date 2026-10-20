@@ -1,0 +1,56 @@
+generated: '2026-10-20'
+method: derived
+generator: derive-vocabulary.py
+source: openapi/_ae-authored/carta-openapi-generated.yml
+vocabulary:
+  name: Carta Domain Vocabulary
+  description: 'Terms declared by Carta''s own API contract: its resource groups, objects and enumerations, with the contract''s definitions.
+    Derived, not authored.'
+  version: '2026-10-20'
+  terms:
+  - term: PostV1Alpha1InvestorsFirmsFirmidFundsFundidCapitalcallsReque
+    definition: 'Object declared by the contract with fields: interestIds, postAsDraft, externalReferenceId, sourceSystem.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/carta-openapi-generated.yml#/components/schemas/PostV1Alpha1InvestorsFirmsFirmidFundsFundidCapitalcallsReque
+  - term: PostV1Alpha1InvestorsFirmsFirmidFundsFundidCapitalcallsRespo
+    definition: 'Object declared by the contract with fields: capitalCall, replayed.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/carta-openapi-generated.yml#/components/schemas/PostV1Alpha1InvestorsFirmsFirmidFundsFundidCapitalcallsRespo
+  - term: PostV1Alpha1InvestorsFirmsFirmidFundsFundidManagementfeesReq
+    definition: 'Object declared by the contract with fields: interestAmounts, amount, externalReferenceId, sourceSystem.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/carta-openapi-generated.yml#/components/schemas/PostV1Alpha1InvestorsFirmsFirmidFundsFundidManagementfeesReq
+  - term: PostV1Alpha1InvestorsFirmsFirmidFundsFundidManagementfeesRes
+    definition: 'Object declared by the contract with fields: replayed.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/carta-openapi-generated.yml#/components/schemas/PostV1Alpha1InvestorsFirmsFirmidFundsFundidManagementfeesRes
+  - term: PostV1Alpha1IssuersIssueridSecondarytransactionsResponse
+    definition: 'Object declared by the contract with fields: secondaryTransactionId, transactionState.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/carta-openapi-generated.yml#/components/schemas/PostV1Alpha1IssuersIssueridSecondarytransactionsResponse
+  - term: PostV1Alpha1IssuersIssueridSecuritiesStocksplitchangesRespon
+    definition: 'Object declared by the contract with fields: splitOccurredSince, affectedAssets, asOf.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/carta-openapi-generated.yml#/components/schemas/PostV1Alpha1IssuersIssueridSecuritiesStocksplitchangesRespon
+  - term: GetV1Alpha1IssuersIssueridTransactionsResponse
+    definition: 'Object declared by the contract with fields: transactions.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/carta-openapi-generated.yml#/components/schemas/GetV1Alpha1IssuersIssueridTransactionsResponse
+  - term: PostV1Alpha1OpencaptablesResponse
+    definition: 'Object declared by the contract with fields: OpenCapTablesRecord.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/carta-openapi-generated.yml#/components/schemas/PostV1Alpha1OpencaptablesResponse
+  - term: V1Alpha1
+    definition: 'Resource group in the contract; its operation GET /v1alpha1/corporations: Retrieve the list of corporations that a user can access
+      Carta.'
+    tags:
+    - Resource Group
+    source: openapi/_ae-authored/carta-openapi-generated.yml

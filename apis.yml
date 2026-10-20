@@ -1,15 +1,14 @@
 aid: carta
+
 name: Carta
-description: >-
-  Carta is an equity management platform offering a REST API for cap table
-  management, 409A valuations, fund administration, employee equity plans,
-  and investor portfolio management. Carta's Developer Platform exposes four
-  API suites — Launch, Investor, Issuer, and Portfolio — authenticated via
-  OAuth 2.0 (Authorization Code and Client Credentials flows). Partner access
-  is invite-only and requires SOC 2 Type 2 certification; Carta customers
-  may request access to their own data on demand. A mock API environment at
-  mock-api.carta.com is provided for sandbox development.
+
+description: Carta is an equity management platform offering a REST API for cap table management, 409A valuations, fund administration, employee
+  equity plans, and investor portfolio management. Carta's Developer Platform exposes four API suites — Launch, Investor, Issuer, and Portfolio
+  — authenticated via OAuth 2.0 (Authorization Code and Client Credentials flows). Partner access is invite-only and requires SOC 2 Type 2 certification;
+  Carta customers may request access to their own data on demand. A mock API environment at mock-api.carta.com is provided for sandbox development.
+
 type: Index
+
 deliveryModel:
   model: saas
   open_source: false
@@ -21,6 +20,7 @@ deliveryModel:
   - pricing
   generated: '2026-08-28'
   method: derived
+
 accessModel:
   pricing: free
   onboarding: approval
@@ -33,147 +33,237 @@ accessModel:
   - plans
   generated: '2026-07-22'
   method: derived
+
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/carta.png
+
 url: https://raw.githubusercontent.com/api-evangelist/carta/refs/heads/main/apis.yml
+
 created: '2026-06-13'
+
 modified: '2026-06-13'
+
 specificationVersion: '0.23'
+
 x-docs-platform: docusaurus
+
 x-docs-platform-confidence: medium
+
 x-docs-platform-checked: 2026-09-21
+
 tags:
-  - Equity Management
-  - Cap Table
-  - 409A Valuations
-  - Fund Administration
-  - Employee Equity
-  - Investor Portfolio
-  - Private Markets
-  - Fintech
-  - Startups
+- Equity Management
+- Cap Table
+- 409A Valuations
+- Fund Administration
+- Employee Equity
+- Investor Portfolio
+- Private Markets
+- Fintech
+- Startups
+
 tags_raw:
-  - Equity Management
-  - Cap Table
-  - 409A Valuations
-  - Fund Administration
-  - Employee Equity
-  - Investor Portfolio
-  - Private Markets
-  - FinTech
-  - Startups
-apis:
-  - aid: carta:launch-api
-    name: Carta Launch API
-    description: >-
-      Enables incorporation partners and law firms to programmatically onboard
-      new companies onto the Carta platform, streamlining the company
-      formation and cap table initialisation workflow.
-    humanURL: https://docs.carta.com/api-platform/docs/introduction
-    baseURL: https://api.carta.com
-    tags:
-      - Incorporation
-      - Company Onboarding
-      - Cap Table
-    properties:
-      - type: Documentation
-        url: https://docs.carta.com/api-platform/docs/introduction
-
-  - aid: carta:investor-api
-    name: Carta Investor API
-    description: >-
-      Permits fund operators to retrieve cap table summaries and portfolio
-      position data for their holdings, enabling downstream analytics,
-      reporting, and portfolio management workflows.
-    humanURL: https://docs.carta.com/api-platform/docs/introduction
-    baseURL: https://api.carta.com
-    tags:
-      - Investor
-      - Portfolio
-      - Cap Table
-      - Fund Management
-    properties:
-      - type: Documentation
-        url: https://docs.carta.com/api-platform/docs/introduction
-
-  - aid: carta:issuer-api
-    name: Carta Issuer API
-    description: >-
-      Allows law firms and technology partners to retrieve cap table data on
-      behalf of companies, supporting legal workflows, equity issuance, and
-      409A valuation processes.
-    humanURL: https://docs.carta.com/api-platform/docs/introduction
-    baseURL: https://api.carta.com
-    tags:
-      - Issuer
-      - Cap Table
-      - 409A
-      - Legal
-    properties:
-      - type: Documentation
-        url: https://docs.carta.com/api-platform/docs/introduction
-
-  - aid: carta:portfolio-api
-    name: Carta Portfolio API
-    description: >-
-      Enables personal finance and wealth management platforms to aggregate
-      equity holdings data for individuals, supporting estate planning, tax
-      preparation, option financing, and underwriting use cases.
-    humanURL: https://docs.carta.com/api-platform/docs/introduction
-    baseURL: https://api.carta.com
-    tags:
-      - Portfolio
-      - Personal Finance
-      - Wealth Management
-      - Equity Holdings
-    properties:
-      - type: Documentation
-        url: https://docs.carta.com/api-platform/docs/introduction
-
-  - aid: carta:crm-api
-    name: Carta CRM API
-    description: >-
-      Facilitates deal and fundraising relationship management across investment
-      processes for fund operators, providing structured access to CRM data
-      within the Carta platform.
-    humanURL: https://docs.carta.com/api-platform/docs/introduction
-    baseURL: https://api.carta.com
-    tags:
-      - CRM
-      - Fundraising
-      - Deal Management
-      - Fund
-    properties:
-      - type: Documentation
-        url: https://docs.carta.com/api-platform/docs/introduction
-
-common:
-  - type: TrustCenter
-    url: security/carta-trust-center.yml
-  - type: DomainSecurity
-    url: security/carta-domain-security.yml
-  - type: Website
-    url: https://carta.com
-  - type: Documentation
-    url: https://docs.carta.com/api-platform/docs/introduction
-  - type: GitHubOrg
-    url: https://github.com/carta
-  - type: LinkedIn
-    url: https://www.linkedin.com/company/carta--
-  - type: Blog
-    url: https://carta.com/blog/
-  - type: Pricing
-    url: https://carta.com/plans/pricing-for-investors/
-  - type: StatusPage
-    url: https://status.carta.com
-  - type: X
-    url: https://x.com/cartainc
-  - type: Plans
-    url: plans/carta-plans-pricing.yml
-  - type: RateLimits
-    url: rate-limits/carta-rate-limits.yml
-  - type: FinOps
-    url: finops/carta-finops.yml
+- Equity Management
+- Cap Table
+- 409A Valuations
+- Fund Administration
+- Employee Equity
+- Investor Portfolio
+- Private Markets
+- FinTech
+- Startups
 
 maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+- FN: Kin Lane
+  email: kin@apievangelist.com
+
+common:
+- type: AgentSkill
+  url: skills/_index.yml
+- type: Spectral
+  url: rules/carta-rules.yml
+- type: JSONLD
+  url: json-ld/carta-context.jsonld
+- type: Vocabulary
+  url: vocabulary/carta-vocabulary.yml
+- type: DataModel
+  url: data-model/carta-data-model.yml
+- type: Conventions
+  url: conventions/carta-conventions.yml
+- type: Sandbox
+  url: sandbox/carta-sandbox.yml
+- type: Compliance
+  url: https://trust.carta.com/
+- type: Authentication
+  url: authentication/carta-authentication.yml
+- type: ErrorCatalog
+  url: errors/carta-problem-types.yml
+- type: Conformance
+  url: conformance/carta-conformance.yml
+- type: LLMsTxt
+  url: llms/carta-llms.txt
+- type: ToolCrosswalk
+  url: mcp/carta-tool-crosswalk.yml
+- type: MCPServer
+  url: mcp/carta-mcp.yml
+- type: SecurityTxt
+  url: well-known/carta-status-security.txt
+- type: WellKnown
+  url: well-known/carta-well-known.yml
+- type: Hosts
+  url: hosts/carta-hosts.yml
+- type: IntegrationEdges
+  url: integrations/carta-integration-edges.yml
+- type: Vendors
+  url: vendors/carta-vendors.yml
+- type: TermsOfService
+  url: https://carta.com/terms-of-service/
+- type: Security
+  url: https://carta.com/security/generative-ai-at-carta/
+- type: PrivacyPolicy
+  url: https://carta.com/privacy/
+- type: Newsroom
+  url: https://carta.com/press/
+- type: Leadership
+  url: https://carta.com/learn/private-funds/management/
+- type: APIReference
+  url: https://docs.carta.com/api-platform/reference/v-1-alpha-1-draft-issuers-create-draft-issuer
+- type: GettingStarted
+  url: https://docs.carta.com/api-platform/guides/getting-started/quickstart-guide
+- type: Login
+  url: https://login.app.carta.com/credentials/login/
+- type: Support
+  url: https://docs.carta.com/api-platform/guides/references/faq-and-support
+- type: TrustCenter
+  url: security/carta-trust-center.yml
+- type: DomainSecurity
+  url: security/carta-domain-security.yml
+- type: Website
+  url: https://carta.com
+- type: Documentation
+  url: https://docs.carta.com/api-platform/guides/getting-started/introduction
+- type: GitHubOrg
+  url: https://github.com/carta
+- type: LinkedIn
+  url: https://www.linkedin.com/company/carta--
+- type: Blog
+  url: https://carta.com/blog/
+- type: Pricing
+  url: https://carta.com/plans/pricing-for-investors/
+- type: StatusPage
+  url: https://status.carta.com
+- type: X
+  url: https://x.com/cartainc
+- type: Plans
+  url: plans/carta-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/carta-rate-limits.yml
+- type: FinOps
+  url: finops/carta-finops.yml
+
+apis:
+- aid: carta:launch-api
+  name: Carta Launch API
+  description: Enables incorporation partners and law firms to programmatically onboard new companies onto the Carta platform, streamlining the
+    company formation and cap table initialisation workflow.
+  humanURL: https://docs.carta.com/api-platform/guides/getting-started/introduction
+  baseURL: https://api.carta.com
+  tags:
+  - Incorporation
+  - Company Onboarding
+  - Cap Table
+  properties:
+  - type: Documentation
+    url: https://docs.carta.com/api-platform/guides/getting-started/introduction
+- aid: carta:investor-api
+  name: Carta Investor API
+  description: Permits fund operators to retrieve cap table summaries and portfolio position data for their holdings, enabling downstream analytics,
+    reporting, and portfolio management workflows.
+  humanURL: https://docs.carta.com/api-platform/guides/getting-started/introduction
+  baseURL: https://api.carta.com
+  tags:
+  - Investor
+  - Portfolio
+  - Cap Table
+  - Fund Management
+  properties:
+  - type: Documentation
+    url: https://docs.carta.com/api-platform/guides/getting-started/introduction
+- aid: carta:issuer-api
+  name: Carta Issuer API
+  description: Allows law firms and technology partners to retrieve cap table data on behalf of companies, supporting legal workflows, equity
+    issuance, and 409A valuation processes.
+  humanURL: https://docs.carta.com/api-platform/guides/getting-started/introduction
+  baseURL: https://api.carta.com
+  tags:
+  - Issuer
+  - Cap Table
+  - 409A
+  - Legal
+  properties:
+  - type: Documentation
+    url: https://docs.carta.com/api-platform/guides/getting-started/introduction
+- aid: carta:portfolio-api
+  name: Carta Portfolio API
+  description: Enables personal finance and wealth management platforms to aggregate equity holdings data for individuals, supporting estate planning,
+    tax preparation, option financing, and underwriting use cases.
+  humanURL: https://docs.carta.com/api-platform/guides/getting-started/introduction
+  baseURL: https://api.carta.com
+  tags:
+  - Portfolio
+  - Personal Finance
+  - Wealth Management
+  - Equity Holdings
+  properties:
+  - type: Documentation
+    url: https://docs.carta.com/api-platform/guides/getting-started/introduction
+- aid: carta:crm-api
+  name: Carta CRM API
+  description: Facilitates deal and fundraising relationship management across investment processes for fund operators, providing structured access
+    to CRM data within the Carta platform.
+  humanURL: https://docs.carta.com/api-platform/guides/getting-started/introduction
+  baseURL: https://api.carta.com
+  tags:
+  - CRM
+  - Fundraising
+  - Deal Management
+  - Fund
+  properties:
+  - type: Documentation
+    url: https://docs.carta.com/api-platform/guides/getting-started/introduction
+- aid: carta:carta-api
+  name: Carta API
+  description: 'Carta API as documented publicly: 40 operations. Contract generated from the documentation by API Evangelist (2026-10-20); not
+
+    the provider''s own document.'
+  humanURL: https://docs.carta.com/api-platform/reference/v-1-alpha-1-files-upload-file
+  baseURL: https://api.carta.com
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/carta-openapi-generated.yml
+    x-provenance: generated
+  - type: JSONSchema
+    url: json-schema/carta-post-v1-alpha1-investors-firms-firmid-funds-fundid-capitalcalls-reque-schema.json
+  - type: JSONSchema
+    url: json-schema/carta-post-v1-alpha1-investors-firms-firmid-funds-fundid-managementfees-req-schema.json
+  - type: JSONSchema
+    url: json-schema/carta-post-v1-alpha1-investors-firms-firmid-funds-fundid-capitalcalls-respo-schema.json
+  - type: JSONSchema
+    url: json-schema/carta-post-v1-alpha1-issuers-issuerid-securities-stocksplitchanges-respon-schema.json
+  - type: JSONSchema
+    url: json-schema/carta-get-v1-alpha1-issuers-issuerid-transactions-response-schema.json
+  - type: JSONSchema
+    url: json-schema/carta-post-v1-alpha1-investors-firms-firmid-funds-fundid-managementfees-res-schema.json
+
+x-coverage:
+  state: covered
+  reason: covered
+  checked: '2026-10-20'
+  detail: API Platform reference read and a 40-operation contract generated from docs; CRM MCP tool list documented.
+  evidence:
+  - url: https://docs.carta.com/api-platform/reference/v-1-alpha-1-investors-list-firms
+    status: 200
+x-enrichment:
+  date: '2026-10-20'
+  status: enriched
+  artifacts_added: 9
+  pass: local-v5

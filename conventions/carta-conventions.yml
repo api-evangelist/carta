@@ -1,0 +1,36 @@
+name: Carta conventions
+generated: '2026-10-20'
+method: searched
+source: https://docs.carta.com/api-platform/guides/references/error-codes
+auth:
+  style: OAuth 2.0 bearer token
+  see: authentication/carta-authentication.yml
+pagination:
+  style: cursor
+  params:
+  - pageSize
+  - pageToken
+  response_fields:
+  - nextPageToken
+  source: https://docs.carta.com/api-platform/reference/v-1-alpha-1-investors-list-firms
+  note: If unspecified, at most 25 firms will be returned. The maximum value is 50; values above 50 will be coerced to 50.
+versioning:
+  scheme: path
+  current: v1alpha1
+errors:
+  envelope: google.rpc.Status (code, message, details[ErrorInfo.reason])
+  see: errors/carta-problem-types.yml
+rate_limit_signaling:
+  headers:
+  - RateLimit-Limit
+  - RateLimit-Remaining
+  - RateLimit-Reset
+  status: 429
+  see: rate-limits/carta-rate-limits.yml
+idempotency:
+  coverage: none
+  note: No idempotency key or replay protection is documented in the API Platform guides or reference pages read 2026-10-20.
+reversibility:
+  status: none-documented
+  note: Write operations (draft issuers, capital calls, management fees, Open Cap Table upload) document no cancel/void/undo
+    operation or reversal window.

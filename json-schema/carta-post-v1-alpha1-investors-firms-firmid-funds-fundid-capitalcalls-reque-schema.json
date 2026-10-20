@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/carta/main/json-schema/carta-post-v1-alpha1-investors-firms-firmid-funds-fundid-capitalcalls-reque-schema.json",
+  "title": "PostV1Alpha1InvestorsFirmsFirmidFundsFundidCapitalcallsReque",
+  "x-generated": "2026-10-20",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/carta-openapi-generated.yml#/components/schemas/PostV1Alpha1InvestorsFirmsFirmidFundsFundidCapitalcallsReque",
+  "type": "object",
+  "properties": {
+    "interestIds": {
+      "type": "string",
+      "description": "When empty, every interest of the fund is called."
+    },
+    "postAsDraft": {
+      "type": "string",
+      "description": "When true, the capital call stays a draft: no journal is posted and no notice is sent. When false, the capital call is also released, the same as Approve & Release in the app: its journal is posted."
+    },
+    "externalReferenceId": {
+      "type": "string",
+      "description": "Used for idempotency on externalReferenceId and sourceSystem."
+    },
+    "sourceSystem": {
+      "type": "string",
+      "description": "Used for idempotency on externalReferenceId and sourceSystem."
+    }
+  }
+}

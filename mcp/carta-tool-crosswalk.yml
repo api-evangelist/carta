@@ -1,0 +1,330 @@
+name: Carta tool crosswalk
+generated: '2026-10-20'
+method: derived
+source: https://docs.carta.com/crm/guides/overview/carta-crm-mcp/
+surfaces:
+  openapi: openapi/_ae-authored/carta-openapi-generated.yml (API Platform; generated from docs)
+  mcp: https://mcp.app.carta.com/mcp (OAuth-gated; CRM tools documented)
+crosswalk: []
+mcp_only:
+- tool: search_contacts
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: fetch_contact_by_id
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: get_contact_interactions
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: find_contact_duplicates
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: get_contact_lists
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: get_contact_fields
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: get_contact_custom_fields
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: get_contact_tags_classifier_prompt
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: search_people
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: enrich_person
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: search_companies
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: fetch_company_by_id
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: fetch_company_by_domain
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: find_company
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: preview_company
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: aggregate_companies
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: get_company_lists
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: get_company_list_data
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: get_company_fields
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: get_company_custom_fields
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: get_company_interactions
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: get_company_relations
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: search_deals
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: fetch_deal_by_deal_id
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: aggregate_deals
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: get_deal_pipelines_with_stages
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: get_deal_fields
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: get_deal_custom_fields
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: get_deal_stage_history
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: get_deal_interactions
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: get_deal_relations
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: search_fundraising
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: get_fundraising
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: aggregate_fundraising
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: get_fundraising_stages
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: get_fundraising_fields
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: get_fundraising_custom_fields
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: get_fundraising_interactions
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: get_fundraising_relations
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: search_investors
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: get_investor
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: aggregate_investors
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: get_investor_fields
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: get_investor_custom_fields
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: get_investor_interactions
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: get_investor_relations
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: get_investor_fund_admin_emails
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: get_investor_fund_admin_email_content
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: search_fees
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: get_fee
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: aggregate_fees
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: get_fee_fields
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: get_fee_custom_fields
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: get_fees_by_deal
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: get_fees_by_contact
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: search_notes
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: fetch_note_by_id
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: get_note_folders
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: list_linked_notes
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: list_notes_by_domain
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: search_tasks
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: list_tasks_by_entity
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: fetch_task_by_id
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: search_themes
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: get_theme_items
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: get_theme_folders
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: get_adviser_profile
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: fetch_contact_interactions_by_emails
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: list_interactions_by_domain
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: list_calendar_events
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: get_company_angles
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: list_my_emails
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: get_my_email_by_id
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: list_reports
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: get_report
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: get_report_data
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: get_report_schedule
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: list_email_campaigns
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: get_email_campaign
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: list_email_campaign_variables
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: get_file_content
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: get_fund_closings_status
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: get_fund_closing_prospect_statuses
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: get_current_user
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: list_organization_users
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: list_organization_teams
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: get_platform_how_to_guide
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: get_tenant_custom_instructions
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: get_user_notification_settings
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: objects_count
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: contact_count
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: create_contact
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: update_contact
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: delete_contact
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: enrich_contact
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: enrich_contacts_bulk
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: add_contact_to_list
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: create_contact_list
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: update_contact_list
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: delete_contact_list
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: create_contact_folder
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: update_contact_folder
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: delete_contact_folder
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: update_contact_tags_classifier_prompt
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: create_company
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: update_company
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: delete_company
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: create_deal
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: update_deal
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: delete_deal
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: update_deal_stage
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: reorder_deal_stage
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: create_fundraising
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: update_fundraising
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: delete_fundraising
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: update_fundraising_stage
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: reorder_fundraising_stage
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: initiate_fundraising_closing
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: send_fundraising_subscription_docs
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: create_investor
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: update_investor
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: delete_investor
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: create_fee
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: update_fee
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: delete_fee
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: create_note
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: update_note
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: delete_note
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: link_note
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: unlink_note
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: create_task
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: update_task
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: delete_task
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: create_theme
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: create_theme_item
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: delete_theme_item
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: add_subtheme
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: remove_subtheme
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: create_report
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: update_report
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: delete_report
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: create_report_schedule
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: update_report_schedule
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: delete_report_schedule
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: create_email_campaign
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: update_email_campaign
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: delete_email_campaign
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: get_signed_upload_url
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: attach_file_to_entity
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: delete_file_from_entity
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: generate_pdf_from_html
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: generate_csv_from_entities
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: create_custom_field
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: update_custom_field
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: reorder_custom_field
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: delete_custom_field
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: update_user_notification_settings
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+- tool: product_support_hotline
+  reason: Carta CRM tool; the documented API Platform REST surface has no CRM operations
+coverage:
+  tools: 158
+  bound: 0
+note: No documented MCP tool invokes a public API Platform REST operation; the CRM has its own reference under docs.carta.com/crm/reference
+  that is not in the generated contract.

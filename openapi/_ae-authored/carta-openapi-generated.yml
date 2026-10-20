@@ -1,0 +1,1001 @@
+openapi: 3.1.0
+info:
+  title: Carta API
+  version: '2026-10-20'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-20: 40 operation(s) read from 40 public documentation page(s) (each
+    operation names its page in x-source). This is not the provider''s published contract; Carta has published no machine-readable contract that
+    the pipeline could find. Engine: anthropic.'
+  x-evidence-tiers:
+    code-example: 0
+    documentation: 40
+    pages-with-code: 0
+    pages-read: 40
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-20'
+  x-generator: generate-contract-from-docs.py
+  x-engine: anthropic
+  x-sources:
+  - https://docs.carta.com/api-platform/reference/v-1-alpha-1-files-upload-file
+  - https://docs.carta.com/api-platform/reference/v-1-alpha-1-issuers-get-issuer
+  - https://docs.carta.com/api-platform/reference/v-1-alpha-1-investors-list-firms
+  - https://docs.carta.com/api-platform/reference/v-1-alpha-1-investors-list-funds
+  - https://docs.carta.com/api-platform/reference/v-1-alpha-1-issuers-list-issuers
+  - https://docs.carta.com/api-platform/reference/v-1-alpha-1-user-get-current-user
+  - https://docs.carta.com/api-platform/reference/v-1-alpha-1-issuers-list-interests
+  - https://docs.carta.com/api-platform/reference/v-1-alpha-1-investors-list-partners
+  - https://docs.carta.com/api-platform/reference/v-1-alpha-1-investors-list-warrants
+  - https://docs.carta.com/api-platform/reference/v-1-alpha-1-issuers-get-stakeholder
+  - https://docs.carta.com/api-platform/reference/v-1-alpha-1-issuers-list-certificates
+  - https://docs.carta.com/api-platform/reference/v-1-alpha-1-issuers-list-stakeholders
+  - https://docs.carta.com/api-platform/reference/v-1-alpha-1-issuers-list-transactions
+  - https://docs.carta.com/api-platform/reference/v-1-alpha-1-investors-get-capital-call
+  - https://docs.carta.com/api-platform/reference/v-1-alpha-1-investors-list-investments
+  - https://docs.carta.com/api-platform/reference/v-1-alpha-1-issuers-list-share-classes
+  - https://docs.carta.com/api-platform/reference/v-1-alpha-1-investors-list-certificates
+  - https://docs.carta.com/api-platform/reference/v-1-alpha-1-issuers-initiate-settlement
+  - https://docs.carta.com/api-platform/reference/v-1-alpha-1-investors-get-management-fee
+  - https://docs.carta.com/api-platform/reference/v-1-alpha-1-investors-list-cash-balances
+  - https://docs.carta.com/api-platform/reference/v-1-alpha-1-investors-adjust-capital-call
+  - https://docs.carta.com/api-platform/reference/v-1-alpha-1-investors-create-capital-call
+  - https://docs.carta.com/api-platform/reference/v-1-alpha-1-investors-list-fund-interests
+  - https://docs.carta.com/api-platform/reference/v-1-alpha-1-issuers-list-option-exercises
+  - https://docs.carta.com/api-platform/reference/v-1-alpha-1-corporations-list-corporations
+  - https://docs.carta.com/api-platform/reference/v-1-alpha-1-draft-issuers-get-draft-issuer
+  - https://docs.carta.com/api-platform/reference/v-1-alpha-1-issuers-list-points-of-contact
+  - https://docs.carta.com/api-platform/reference/v-1-alpha-1-investors-create-management-fee
+  - https://docs.carta.com/api-platform/reference/v-1-alpha-1-investors-list-partner-contacts
+  - https://docs.carta.com/api-platform/reference/v-1-alpha-1-issuers-list-fair-market-values
+  - https://docs.carta.com/api-platform/reference/v-1-alpha-1-investors-list-convertible-notes
+  - https://docs.carta.com/api-platform/reference/v-1-alpha-1-issuers-get-capitalization-table
+  - https://docs.carta.com/api-platform/reference/v-1-alpha-1-draft-issuers-create-draft-issuer
+  - https://docs.carta.com/api-platform/reference/v-1-alpha-1-investors-get-capitalization-table
+  - https://docs.carta.com/api-platform/reference/v-1-alpha-1-portfolios-issuers-list-portfolios
+  - https://docs.carta.com/api-platform/reference/v-1-alpha-1-investors-list-capitalization-tables
+  - https://docs.carta.com/api-platform/reference/v-1-alpha-1-portfolios-issuers-list-certificates
+  - https://docs.carta.com/api-platform/reference/v-1-alpha-1-issuers-get-stock-split-asset-changes
+  - https://docs.carta.com/api-platform/reference/v-1-alpha-1-open-cap-tables-upload-open-cap-table
+  - https://docs.carta.com/api-platform/reference/v-1-alpha-1-issuers-get-stakeholder-equity-summary
+servers:
+- url: https://api.carta.com
+paths:
+  /v1alpha1/corporations:
+    get:
+      operationId: get_v1alpha1_corporations
+      tags:
+      - V1Alpha1
+      summary: Retrieve the list of corporations that a user can access Carta.
+      x-source: https://docs.carta.com/api-platform/reference/v-1-alpha-1-corporations-list-corporations
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /v1alpha1/draftIssuers:
+    post:
+      operationId: post_v1alpha1_draftIssuers
+      tags:
+      - V1Alpha1
+      summary: Create a draft version of an issuer.
+      x-source: https://docs.carta.com/api-platform/reference/v-1-alpha-1-draft-issuers-create-draft-issuer
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /v1alpha1/draftIssuers/{id}:
+    get:
+      operationId: get_v1alpha1_draftIssuers_id
+      tags:
+      - V1Alpha1
+      summary: Retrieve a draft version of an issuer.
+      x-source: https://docs.carta.com/api-platform/reference/v-1-alpha-1-draft-issuers-get-draft-issuer
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /v1alpha1/files{upload}:
+    post:
+      operationId: post_v1alpha1_files_upload
+      tags:
+      - V1Alpha1
+      summary: Synchronously upload a generic file as a binary payload.
+      x-source: https://docs.carta.com/api-platform/reference/v-1-alpha-1-files-upload-file
+      parameters:
+      - name: upload
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /v1alpha1/investors/firms:
+    get:
+      operationId: get_v1alpha1_investors_firms
+      tags:
+      - V1Alpha1
+      summary: Retrieves investment firms.
+      x-source: https://docs.carta.com/api-platform/reference/v-1-alpha-1-investors-list-firms
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /v1alpha1/investors/firms/{firmid}/funds:
+    get:
+      operationId: get_v1alpha1_investors_firms_firmid_funds
+      tags:
+      - V1Alpha1
+      summary: Retrieves the investment funds of a given investment firm.
+      x-source: https://docs.carta.com/api-platform/reference/v-1-alpha-1-investors-list-funds
+      parameters:
+      - name: firmid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /v1alpha1/investors/firms/{firmid}/funds/{fundid}/capitalCalls:
+    post:
+      operationId: post_v1alpha1_investors_firms_firmid_funds_fundid_capitalCalls
+      tags:
+      - V1Alpha1
+      summary: Creates a capital call for a fund-level amount, in the fund's currency, and allocates it across the fund's interests the same way
+        the capital call wizard in the app does.
+      x-source: https://docs.carta.com/api-platform/reference/v-1-alpha-1-investors-create-capital-call
+      parameters:
+      - name: firmid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: fundid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostV1Alpha1InvestorsFirmsFirmidFundsFundidCapitalcallsReque'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostV1Alpha1InvestorsFirmsFirmidFundsFundidCapitalcallsRespo'
+      x-evidence:
+        kind: documentation
+  /v1alpha1/investors/firms/{firmid}/funds/{fundid}/capitalCalls/{capitalcallid}:
+    get:
+      operationId: get_v1alpha1_investors_firms_firmid_funds_fundid_capitalCalls_capitalcallid
+      tags:
+      - V1Alpha1
+      summary: Retrieves a capital call, with its status and how its amount is allocated across the fund's interests.
+      x-source: https://docs.carta.com/api-platform/reference/v-1-alpha-1-investors-get-capital-call
+      parameters:
+      - name: firmid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: fundid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: capitalcallid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /v1alpha1/investors/firms/{firmid}/funds/{fundid}/capitalCalls/{capitalCallId}{adjust}:
+    post:
+      operationId: post_v1alpha1_investors_firms_firmid_funds_fundid_capitalCalls_capitalCallId_adj
+      tags:
+      - V1Alpha1
+      summary: Changes the total amount of a capital call, in the fund's currency, and reallocates it across its interests the same way editing
+        the capital call in the app does.
+      x-source: https://docs.carta.com/api-platform/reference/v-1-alpha-1-investors-adjust-capital-call
+      parameters:
+      - name: firmid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: fundid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: capitalCallId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: adjust
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /v1alpha1/investors/firms/{firmid}/funds/{fundid}/cashBalances:
+    get:
+      operationId: get_v1alpha1_investors_firms_firmid_funds_fundid_cashBalances
+      tags:
+      - V1Alpha1
+      summary: Retrieve a list of cash balances for a given firm and fund.
+      x-source: https://docs.carta.com/api-platform/reference/v-1-alpha-1-investors-list-cash-balances
+      parameters:
+      - name: firmid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: fundid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /v1alpha1/investors/firms/{firmid}/funds/{fundid}/interests:
+    get:
+      operationId: get_v1alpha1_investors_firms_firmid_funds_fundid_interests
+      tags:
+      - V1Alpha1
+      summary: Retrieves the partner interests of a fund.
+      x-source: https://docs.carta.com/api-platform/reference/v-1-alpha-1-investors-list-fund-interests
+      parameters:
+      - name: firmid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: fundid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /v1alpha1/investors/firms/{firmid}/funds/{fundid}/investments:
+    get:
+      operationId: get_v1alpha1_investors_firms_firmid_funds_fundid_investments
+      tags:
+      - V1Alpha1
+      summary: Retrieve the company investments or portfolio companies of a given fund.
+      x-source: https://docs.carta.com/api-platform/reference/v-1-alpha-1-investors-list-investments
+      parameters:
+      - name: firmid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: fundid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /v1alpha1/investors/firms/{firmid}/funds/{fundid}/investments/{companyid}/capitalizationTables:
+    get:
+      operationId: get_v1alpha1_investors_firms_firmid_funds_fundid_investments_companyid_capitaliz
+      tags:
+      - V1Alpha1
+      summary: Retrieves the capitalization tables for a given firm, fund, and investment company.
+      x-source: https://docs.carta.com/api-platform/reference/v-1-alpha-1-investors-list-capitalization-tables
+      parameters:
+      - name: firmid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: fundid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: companyid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /v1alpha1/investors/firms/{firmid}/funds/{fundid}/investments/{companyid}/capitalizationTables/{capitalizationtableid}:
+    get:
+      operationId: get_v1alpha1_investors_firms_firmid_funds_fundid_investments_companyid_capitaliz
+      tags:
+      - V1Alpha1
+      summary: Retrieve a capitalization table for a given firm, fund, and investment.
+      x-source: https://docs.carta.com/api-platform/reference/v-1-alpha-1-investors-get-capitalization-table
+      parameters:
+      - name: firmid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: fundid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: companyid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: capitalizationtableid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /v1alpha1/investors/firms/{firmid}/funds/{fundid}/investments/{investmentid}/certificates:
+    get:
+      operationId: get_v1alpha1_investors_firms_firmid_funds_fundid_investments_investmentid_certif
+      tags:
+      - V1Alpha1
+      summary: Retrieve certificates issued by an investment company to a fund within a firm.
+      x-source: https://docs.carta.com/api-platform/reference/v-1-alpha-1-investors-list-certificates
+      parameters:
+      - name: firmid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: fundid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: investmentid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /v1alpha1/investors/firms/{firmid}/funds/{fundid}/investments/{investmentid}/convertibleNotes:
+    get:
+      operationId: get_v1alpha1_investors_firms_firmid_funds_fundid_investments_investmentid_conver
+      tags:
+      - V1Alpha1
+      summary: Retrieve convertible notes and SAFEs issued by an investment company to a fund within a firm.
+      x-source: https://docs.carta.com/api-platform/reference/v-1-alpha-1-investors-list-convertible-notes
+      parameters:
+      - name: firmid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: fundid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: investmentid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /v1alpha1/investors/firms/{firmid}/funds/{fundid}/investments/{investmentid}/warrants:
+    get:
+      operationId: get_v1alpha1_investors_firms_firmid_funds_fundid_investments_investmentid_warran
+      tags:
+      - V1Alpha1
+      summary: Retrieve investment warrants issued by an investment company to a fund within a firm.
+      x-source: https://docs.carta.com/api-platform/reference/v-1-alpha-1-investors-list-warrants
+      parameters:
+      - name: firmid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: fundid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: investmentid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /v1alpha1/investors/firms/{firmid}/funds/{fundid}/managementFees:
+    post:
+      operationId: post_v1alpha1_investors_firms_firmid_funds_fundid_managementFees
+      tags:
+      - V1Alpha1
+      summary: Books a limited partner level management fee period calculated outside Carta and posts the fee journal.
+      x-source: https://docs.carta.com/api-platform/reference/v-1-alpha-1-investors-create-management-fee
+      parameters:
+      - name: firmid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: fundid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostV1Alpha1InvestorsFirmsFirmidFundsFundidManagementfeesReq'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostV1Alpha1InvestorsFirmsFirmidFundsFundidManagementfeesRes'
+      x-evidence:
+        kind: documentation
+  /v1alpha1/investors/firms/{firmid}/funds/{fundid}/managementFees/{managementfeeid}:
+    get:
+      operationId: get_v1alpha1_investors_firms_firmid_funds_fundid_managementFees_managementfeeid
+      tags:
+      - V1Alpha1
+      summary: Retrieves a management fee booked through Create Management Fee, with the current state of its journal.
+      x-source: https://docs.carta.com/api-platform/reference/v-1-alpha-1-investors-get-management-fee
+      parameters:
+      - name: firmid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: fundid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: managementfeeid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /v1alpha1/investors/firms/{firmid}/partnerContacts:
+    get:
+      operationId: get_v1alpha1_investors_firms_firmid_partnerContacts
+      tags:
+      - V1Alpha1
+      summary: Retrieves a list of contacts associated with partners across all funds for a given firm.
+      x-source: https://docs.carta.com/api-platform/reference/v-1-alpha-1-investors-list-partner-contacts
+      parameters:
+      - name: firmid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /v1alpha1/investors/firms/{firmid}/partners:
+    get:
+      operationId: get_v1alpha1_investors_firms_firmid_partners
+      tags:
+      - V1Alpha1
+      summary: Retrieves a list of partners (LPs, GPs, etc.) across all funds for a given firm.
+      x-source: https://docs.carta.com/api-platform/reference/v-1-alpha-1-investors-list-partners
+      parameters:
+      - name: firmid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /v1alpha1/issuers:
+    get:
+      operationId: get_v1alpha1_issuers
+      tags:
+      - V1Alpha1
+      summary: Retrieve issuers.
+      x-source: https://docs.carta.com/api-platform/reference/v-1-alpha-1-issuers-list-issuers
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /v1alpha1/issuers/{id}:
+    get:
+      operationId: get_v1alpha1_issuers_id
+      tags:
+      - V1Alpha1
+      summary: Retrieve an issuer.
+      x-source: https://docs.carta.com/api-platform/reference/v-1-alpha-1-issuers-get-issuer
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /v1alpha1/issuers/{issuerid}/capitalizationTable:
+    get:
+      operationId: get_v1alpha1_issuers_issuerid_capitalizationTable
+      tags:
+      - V1Alpha1
+      summary: GET /v1alpha1/issuers/{issuerid}/capitalizationTable
+      x-source: https://docs.carta.com/api-platform/reference/v-1-alpha-1-issuers-get-capitalization-table
+      parameters:
+      - name: issuerid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /v1alpha1/issuers/{issuerid}/certificates:
+    get:
+      operationId: get_v1alpha1_issuers_issuerid_certificates
+      tags:
+      - V1Alpha1
+      summary: Retrieve certificates.
+      x-source: https://docs.carta.com/api-platform/reference/v-1-alpha-1-issuers-list-certificates
+      parameters:
+      - name: issuerid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /v1alpha1/issuers/{issuerid}/fairMarketValues:
+    get:
+      operationId: get_v1alpha1_issuers_issuerid_fairMarketValues
+      tags:
+      - V1Alpha1
+      summary: Retrieve the fair market values of an issuer, which are the values of the issuer's securities as determined by the issuer's 409a
+        valuations.
+      x-source: https://docs.carta.com/api-platform/reference/v-1-alpha-1-issuers-list-fair-market-values
+      parameters:
+      - name: issuerid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /v1alpha1/issuers/{issuerid}/interests:
+    get:
+      operationId: get_v1alpha1_issuers_issuerid_interests
+      tags:
+      - V1Alpha1
+      summary: Retrieves interests for the issuer.
+      x-source: https://docs.carta.com/api-platform/reference/v-1-alpha-1-issuers-list-interests
+      parameters:
+      - name: issuerid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /v1alpha1/issuers/{issuerid}/optionExercises:
+    get:
+      operationId: get_v1alpha1_issuers_issuerid_optionExercises
+      tags:
+      - V1Alpha1
+      summary: Retrieve option exercises.
+      x-source: https://docs.carta.com/api-platform/reference/v-1-alpha-1-issuers-list-option-exercises
+      parameters:
+      - name: issuerid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /v1alpha1/issuers/{issuerid}/pointsOfContact:
+    get:
+      operationId: get_v1alpha1_issuers_issuerid_pointsOfContact
+      tags:
+      - V1Alpha1
+      summary: Retrieve points of contact for a given issuer.
+      x-source: https://docs.carta.com/api-platform/reference/v-1-alpha-1-issuers-list-points-of-contact
+      parameters:
+      - name: issuerid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /v1alpha1/issuers/{issuerid}/secondaryTransactions:
+    post:
+      operationId: post_v1alpha1_issuers_issuerid_secondaryTransactions
+      tags:
+      - V1Alpha1
+      summary: Creates a secondary transaction, soft-locks each security being settled, and returns the transaction identifier.
+      x-source: https://docs.carta.com/api-platform/reference/v-1-alpha-1-issuers-initiate-settlement
+      parameters:
+      - name: issuerid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostV1Alpha1IssuersIssueridSecondarytransactionsResponse'
+      x-evidence:
+        kind: documentation
+  /v1alpha1/issuers/{issuerid}/securities{stockSplitChanges}:
+    post:
+      operationId: post_v1alpha1_issuers_issuerid_securities_stockSplitChanges
+      tags:
+      - V1Alpha1
+      summary: For a set of securities you hold and a reference time, reports whether a stock split has occurred for the issuer since that time
+        and, for each affected security, its pre- and post-split quantity and p
+      x-source: https://docs.carta.com/api-platform/reference/v-1-alpha-1-issuers-get-stock-split-asset-changes
+      parameters:
+      - name: issuerid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: stockSplitChanges
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostV1Alpha1IssuersIssueridSecuritiesStocksplitchangesRespon'
+      x-evidence:
+        kind: documentation
+  /v1alpha1/issuers/{issuerid}/shareClasses:
+    get:
+      operationId: get_v1alpha1_issuers_issuerid_shareClasses
+      tags:
+      - V1Alpha1
+      summary: Retrieve an issuer's share classes.
+      x-source: https://docs.carta.com/api-platform/reference/v-1-alpha-1-issuers-list-share-classes
+      parameters:
+      - name: issuerid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /v1alpha1/issuers/{issuerid}/stakeholders:
+    get:
+      operationId: get_v1alpha1_issuers_issuerid_stakeholders
+      tags:
+      - V1Alpha1
+      summary: Retrieve stakeholders.
+      x-source: https://docs.carta.com/api-platform/reference/v-1-alpha-1-issuers-list-stakeholders
+      parameters:
+      - name: issuerid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /v1alpha1/issuers/{issuerid}/stakeholders/{id}:
+    get:
+      operationId: get_v1alpha1_issuers_issuerid_stakeholders_id
+      tags:
+      - V1Alpha1
+      summary: Retrieve a stakeholder.
+      x-source: https://docs.carta.com/api-platform/reference/v-1-alpha-1-issuers-get-stakeholder
+      parameters:
+      - name: issuerid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /v1alpha1/issuers/{issuerid}/stakeholders/{stakeholderid}/equitySummary:
+    get:
+      operationId: get_v1alpha1_issuers_issuerid_stakeholders_stakeholderid_equitySummary
+      tags:
+      - V1Alpha1
+      summary: Retrieves a summary of a stakeholder's equity positions — certificates, option grants (ISO and NSO), restricted stock awards, and
+        restricted stock units — at a given issuer.
+      x-source: https://docs.carta.com/api-platform/reference/v-1-alpha-1-issuers-get-stakeholder-equity-summary
+      parameters:
+      - name: issuerid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: stakeholderid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /v1alpha1/issuers/{issuerid}/transactions:
+    get:
+      operationId: get_v1alpha1_issuers_issuerid_transactions
+      tags:
+      - V1Alpha1
+      summary: Retrieve transaction history for securities belonging to an issuer, filtered by security type.
+      x-source: https://docs.carta.com/api-platform/reference/v-1-alpha-1-issuers-list-transactions
+      parameters:
+      - name: issuerid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: type
+        in: query
+        required: false
+        schema:
+          type: string
+        description: 'Security type filter. Supported values: option, rsu, rsa, certificate, warrant, convertible, piu, sar, phantom'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetV1Alpha1IssuersIssueridTransactionsResponse'
+      x-evidence:
+        kind: documentation
+  /v1alpha1/openCapTables:
+    post:
+      operationId: post_v1alpha1_openCapTables
+      tags:
+      - V1Alpha1
+      summary: POST /v1alpha1/openCapTables
+      x-source: https://docs.carta.com/api-platform/reference/v-1-alpha-1-open-cap-tables-upload-open-cap-table
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostV1Alpha1OpencaptablesResponse'
+      x-evidence:
+        kind: documentation
+  /v1alpha1/portfolios:
+    get:
+      operationId: get_v1alpha1_portfolios
+      tags:
+      - V1Alpha1
+      summary: Retrieve shareholder portfolios.
+      x-source: https://docs.carta.com/api-platform/reference/v-1-alpha-1-portfolios-issuers-list-portfolios
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /v1alpha1/portfolios/{portfolioid}/issuers/{issuerid}/certificates:
+    get:
+      operationId: get_v1alpha1_portfolios_portfolioid_issuers_issuerid_certificates
+      tags:
+      - V1Alpha1
+      summary: Retrieve certificates.
+      x-source: https://docs.carta.com/api-platform/reference/v-1-alpha-1-portfolios-issuers-list-certificates
+      parameters:
+      - name: portfolioid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: issuerid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /v1alpha1/user:
+    get:
+      operationId: get_v1alpha1_user
+      tags:
+      - V1Alpha1
+      summary: Retrieve the user associated with the access token provided to authorize the request.
+      x-source: https://docs.carta.com/api-platform/reference/v-1-alpha-1-user-get-current-user
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+components:
+  schemas:
+    PostV1Alpha1InvestorsFirmsFirmidFundsFundidCapitalcallsReque:
+      type: object
+      properties:
+        interestIds:
+          type: string
+          description: When empty, every interest of the fund is called.
+        postAsDraft:
+          type: string
+          description: 'When true, the capital call stays a draft: no journal is posted and no notice is sent. When false, the capital call is
+            also released, the same as Approve & Release in the app: its journal is posted.'
+        externalReferenceId:
+          type: string
+          description: Used for idempotency on externalReferenceId and sourceSystem.
+        sourceSystem:
+          type: string
+          description: Used for idempotency on externalReferenceId and sourceSystem.
+    PostV1Alpha1InvestorsFirmsFirmidFundsFundidCapitalcallsRespo:
+      type: object
+      properties:
+        capitalCall:
+          type: string
+          description: The created capital call.
+        replayed:
+          type: string
+          description: Set to true when a retry with the same payload returns the original capital call.
+    PostV1Alpha1InvestorsFirmsFirmidFundsFundidManagementfeesReq:
+      type: object
+      properties:
+        interestAmounts:
+          type: string
+          description: Per-interest amounts that must sum exactly to amount
+        amount:
+          type: string
+        externalReferenceId:
+          type: string
+          description: Used for idempotency
+        sourceSystem:
+          type: string
+          description: Used for idempotency
+      required:
+      - interestAmounts
+      - amount
+    PostV1Alpha1InvestorsFirmsFirmidFundsFundidManagementfeesRes:
+      type: object
+      properties:
+        replayed:
+          type: string
+          description: Set to true on retry with same payload
+    PostV1Alpha1IssuersIssueridSecondarytransactionsResponse:
+      type: object
+      properties:
+        secondaryTransactionId:
+          type: string
+        transactionState:
+          type: string
+    PostV1Alpha1IssuersIssueridSecuritiesStocksplitchangesRespon:
+      type: object
+      properties:
+        splitOccurredSince:
+          type: string
+        affectedAssets:
+          type: string
+        asOf:
+          type: string
+    GetV1Alpha1IssuersIssueridTransactionsResponse:
+      type: object
+      properties:
+        transactions:
+          type: string
+          description: Transaction history for securities
+    PostV1Alpha1OpencaptablesResponse:
+      type: object
+      properties:
+        OpenCapTablesRecord:
+          type: string
+tags:
+- name: V1Alpha1

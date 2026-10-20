@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/carta/main/json-schema/carta-post-v1-alpha1-investors-firms-firmid-funds-fundid-managementfees-req-schema.json",
+  "title": "PostV1Alpha1InvestorsFirmsFirmidFundsFundidManagementfeesReq",
+  "x-generated": "2026-10-20",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/carta-openapi-generated.yml#/components/schemas/PostV1Alpha1InvestorsFirmsFirmidFundsFundidManagementfeesReq",
+  "type": "object",
+  "properties": {
+    "interestAmounts": {
+      "type": "string",
+      "description": "Per-interest amounts that must sum exactly to amount"
+    },
+    "amount": {
+      "type": "string"
+    },
+    "externalReferenceId": {
+      "type": "string",
+      "description": "Used for idempotency"
+    },
+    "sourceSystem": {
+      "type": "string",
+      "description": "Used for idempotency"
+    }
+  },
+  "required": [
+    "interestAmounts",
+    "amount"
+  ]
+}

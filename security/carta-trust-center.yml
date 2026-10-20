@@ -1,4 +1,4 @@
-generated: '2026-07-11'
+generated: '2026-10-20'
 method: searched
 probe: true
 source: https://trust.carta.com/
@@ -12,6 +12,5 @@ evidence:
   keywords:
   - soc 2
   - soc2
-  - iso 27001
   - trust center
   - gdpr

@@ -1,0 +1,15 @@
+name: Carta sandbox
+generated: '2026-10-20'
+method: searched
+source: https://docs.carta.com/api-platform/guides/getting-started/playground-environment
+description: Playground environment with fake data comparable to production, OAuth 2.0 + OpenID Connect, plus a frontend;
+  separate playground client ID/secret. A mock environment (https://mock-api.carta.com, the server shown on every API reference
+  page) is also offered and selectable in the Postman collection.
+docs: https://docs.carta.com/api-platform/guides/getting-started/playground-environment
+environments:
+- name: playground
+  credentials: playground app client_id/client_secret from the Developer Portal Playground tab
+- name: mock
+  base_url: https://mock-api.carta.com
+  probe: GET /v1alpha1/investors/firms -> 401 anonymous (2026-10-20)
+promotion: https://docs.carta.com/api-platform/guides/getting-started/migrate-to-production

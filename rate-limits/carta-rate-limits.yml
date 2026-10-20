@@ -1,54 +1,30 @@
-# Provenance stamped 2026-10-07 (roadmap#943): written by an API Evangelist sweep (undated — the file carries no date and git cannot supply one), not
-# harvested from the provider. `method: generated` so the economics campaign may replace it with a
-# dated, verbatim transcription; every figure below is unverified until it does.
-method: generated
-name: Carta API Rate Limits
-description: >-
-  Carta's API enforces rate limits to ensure platform stability and fair
-  access across all integrated partners. Documented limits apply to OAuth
-  app-level traffic. Specific production rate limit tiers are not publicly
-  disclosed; the values below reflect published playground / sandbox limits
-  and available partner documentation.
-specificationVersion: '0.1'
-rateLimits:
-  - environment: Playground / Sandbox
-    scope: per OAuth application
-    limits:
-      - type: burst
-        value: 5
-        unit: requests per second
-        description: Maximum burst rate per OAuth application in the sandbox environment.
-      - type: sustained
-        value: 150
-        unit: requests per minute
-        description: Sustained rate limit per OAuth application in the sandbox environment.
-    notes: >-
-      Partners can burst to 5 requests per second per OAuth app, with a
-      sustained limit of 150 requests per minute in the playground environment.
-
-  - environment: Production
-    scope: per OAuth application
-    limits: []
-    notes: >-
-      Production rate limit values are not publicly documented. Partners
-      should consult their Carta partner agreement or contact
-      partners@carta.com for production throttle thresholds. Endpoints
-      also carry individual TTL (Time-To-Live) cache windows — see the
-      Endpoints & TTLs reference in Carta docs for per-resource caching
-      behavior.
-
+name: Carta rate limits
+generated: '2026-10-20'
+method: searched
+source: https://docs.carta.com/api-platform/guides/references/rate-limiting
+limits:
+- name: per-second
+  limit_text: Up to 10 requests/second
+  max: 10
+  limit: 10
+  window: second
+  kind: burst
+  scope: per client
+- name: per-minute
+  limit_text: Up to 300 requests/minute
+  max: 300
+  limit: 300
+  window: minute
+  scope: per client
 headers:
-  - name: Retry-After
-    description: >-
-      Returned when a rate limit is exceeded. Indicates the number of seconds
-      the client should wait before retrying the request.
-  - name: X-RateLimit-Limit
-    description: The maximum number of requests allowed per time window.
-  - name: X-RateLimit-Remaining
-    description: The number of requests remaining in the current time window.
-  - name: X-RateLimit-Reset
-    description: The Unix timestamp at which the current time window resets.
-
-documentation:
-  rateLimitsURL: https://docs.carta.com/api-platform/docs/introduction
-  endpointTTLsURL: https://docs.carta.com/api-platform/docs/introduction
+- RateLimit-Limit
+- RateLimit-Remaining
+- RateLimit-Reset
+- X-RateLimit-Limit-Second
+- X-RateLimit-Remaining-Second
+- X-RateLimit-Limit-Minute
+- X-RateLimit-Remaining-Minute
+exhaustion:
+  status: 429
+  body: '{ "message" : "API rate limit exceeded" }'
+note: Replaces an undated generated file (5 rps / 150 rpm) that the current docs page contradicts.

@@ -14,11 +14,10 @@ deployment:
   checked: '2026-09-11'
   source: docs-check 2026-09-12 (endpoint found in the provider's own documentation, then probed)
   probe_why: RFC 9728 challenge on the MCP path only
-tools_note: No tool list captured. This manifest records a PROBED, reachable endpoint only; anonymous
-  tools/list was auth-gated or the server requires an initialize handshake this reachability probe does
-  not perform. Run signals/audit_mcp_authorship.py --probe to enumerate tools and settle platform-vs-provider
-  authorship. Do NOT derive a tool list from the OpenAPI and store it here -- that is a candidate manifest,
-  and it belongs under an X-MCPServerCandidate pointer.
+tools_note: No tool list captured. This manifest records a PROBED, reachable endpoint only; anonymous tools/list was auth-gated
+  or the server requires an initialize handshake this reachability probe does not perform. Run signals/audit_mcp_authorship.py
+  --probe to enumerate tools and settle platform-vs-provider authorship. Do NOT derive a tool list from the OpenAPI and store
+  it here -- that is a candidate manifest, and it belongs under an X-MCPServerCandidate pointer.
 rfc9728:
   endpoint: https://mcp.app.carta.com/mcp
   metadata_url: https://mcp.app.carta.com/.well-known/oauth-protected-resource/mcp
@@ -41,3 +40,491 @@ rfc9728:
     - readwrite_mcp_crm
     bearer_methods_supported:
     - header
+documented_tools:
+  source: https://docs.carta.com/crm/guides/overview/carta-crm-mcp/
+  method: searched
+  strength: list
+  note: 'Names the provider PUBLISHES for the Carta CRM MCP server (158 GA tools: 91 read-only, 67 write). Not a live tools/list;
+    the endpoint is OAuth-gated.'
+  tools:
+  - name: search_contacts
+    access: read
+    description: Search CRM contacts by free-text query, list/folder, and structured filters (current company, titles, tags,
+      city/country, date added, interaction frequency goal, relationship status).
+  - name: fetch_contact_by_id
+    access: read
+    description: Return one contact by ID, with the deals and notes it is related to, including interaction frequency goal
+      and derived relationship status.
+  - name: get_contact_interactions
+    access: read
+    description: List email and calendar interactions with a single contact by CRM ID.
+  - name: find_contact_duplicates
+    access: read
+    description: Find suspected duplicate contacts, grouped by match type (email, LinkedIn, name).
+  - name: get_contact_lists
+    access: read
+    description: Return the full contact list and folder hierarchy.
+  - name: get_contact_fields
+    access: read
+    description: Return all contact fields — standard and custom — with IDs and types.
+  - name: get_contact_custom_fields
+    access: read
+    description: Return custom field definitions for contacts.
+  - name: get_contact_tags_classifier_prompt
+    access: read
+    description: Return the organization's contact-tags classifier prompt.
+  - name: search_people
+    access: read
+    description: Search the public internet (LinkedIn) for people not yet in the CRM.
+  - name: enrich_person
+    access: read
+    description: Retrieve public profile details (name, title, emails, jobs, tags, location) for one person by LinkedIn URL.
+  - name: search_companies
+    access: read
+    description: Search companies by structured filters plus a free-text query.
+  - name: fetch_company_by_id
+    access: read
+    description: Return one company by CRM ID.
+  - name: fetch_company_by_domain
+    access: read
+    description: Return one company by web domain.
+  - name: find_company
+    access: read
+    description: Look up companies by name; returns matches with name, domain, and source.
+  - name: preview_company
+    access: read
+    description: Return a company profile by domain.
+  - name: aggregate_companies
+    access: read
+    description: Group and count companies by field values.
+  - name: get_company_lists
+    access: read
+    description: Return all company lists.
+  - name: get_company_list_data
+    access: read
+    description: Read the companies on one company list, with the fields that list is configured to show.
+  - name: get_company_fields
+    access: read
+    description: Return all company fields — standard and custom — with IDs and types.
+  - name: get_company_custom_fields
+    access: read
+    description: Return custom field definitions for companies.
+  - name: get_company_interactions
+    access: read
+    description: List email and calendar interactions with contacts at a company.
+  - name: get_company_relations
+    access: read
+    description: List aggregated relationships (one row per unique participant) at a company.
+  - name: search_deals
+    access: read
+    description: Search deals by structured filters, stage, free-text query, and date range.
+  - name: fetch_deal_by_deal_id
+    access: read
+    description: Return one deal in full detail, including related notes and people.
+  - name: aggregate_deals
+    access: read
+    description: Group and count deals by field values.
+  - name: get_deal_pipelines_with_stages
+    access: read
+    description: Return all deal pipelines with their stages.
+  - name: get_deal_fields
+    access: read
+    description: Return all deal fields — standard and custom — with IDs and types.
+  - name: get_deal_custom_fields
+    access: read
+    description: Return custom field definitions for deals.
+  - name: get_deal_stage_history
+    access: read
+    description: Return timestamped stage transitions for a deal.
+  - name: get_deal_interactions
+    access: read
+    description: List email and calendar interactions for the company on a deal.
+  - name: get_deal_relations
+    access: read
+    description: List aggregated relationships for the company on a deal.
+  - name: search_fundraising
+    access: read
+    description: Search and list fundraising opportunities, newest first.
+  - name: get_fundraising
+    access: read
+    description: Return one fundraising opportunity by ID.
+  - name: aggregate_fundraising
+    access: read
+    description: Group and count fundraising opportunities by field values.
+  - name: get_fundraising_stages
+    access: read
+    description: Return all fundraising stages and their valid stageId values.
+  - name: get_fundraising_fields
+    access: read
+    description: Return all fundraising fields — standard and custom — with IDs and types.
+  - name: get_fundraising_custom_fields
+    access: read
+    description: Return custom field definitions for fundraising.
+  - name: get_fundraising_interactions
+    access: read
+    description: List email and calendar interactions for a fundraising opportunity.
+  - name: get_fundraising_relations
+    access: read
+    description: List aggregated relationships for a fundraising opportunity.
+  - name: search_investors
+    access: read
+    description: Search and list investors.
+  - name: get_investor
+    access: read
+    description: Return one investor by ID.
+  - name: aggregate_investors
+    access: read
+    description: Group and count investors by field values.
+  - name: get_investor_fields
+    access: read
+    description: Return all investor fields — standard and custom — with IDs and types.
+  - name: get_investor_custom_fields
+    access: read
+    description: Return custom field definitions for investors.
+  - name: get_investor_interactions
+    access: read
+    description: List email and calendar interactions for an investor.
+  - name: get_investor_relations
+    access: read
+    description: List aggregated relationships for an investor.
+  - name: get_investor_fund_admin_emails
+    access: read
+    description: List fund-admin emails sent to an investor (capital calls, distribution notices, document shares).
+  - name: get_investor_fund_admin_email_content
+    access: read
+    description: Return the rendered subject and body of one fund-admin email.
+  - name: search_fees
+    access: read
+    description: Search and list fees charged in the course of a deal.
+  - name: get_fee
+    access: read
+    description: Return one fee by ID.
+  - name: aggregate_fees
+    access: read
+    description: Group and count fees by field values.
+  - name: get_fee_fields
+    access: read
+    description: Return all fee fields — standard and custom — with IDs and types.
+  - name: get_fee_custom_fields
+    access: read
+    description: Return custom field definitions for fees.
+  - name: get_fees_by_deal
+    access: read
+    description: List every fee linked to a deal, with the total across them.
+  - name: get_fees_by_contact
+    access: read
+    description: List every fee linked to a contact, with the total across them.
+  - name: search_notes
+    access: read
+    description: Search notes by string; omit the query to return all notes.
+  - name: fetch_note_by_id
+    access: read
+    description: Return one note by ID — title, text, folder, owner, timestamps.
+  - name: get_note_folders
+    access: read
+    description: Return all note folders for the organization.
+  - name: list_linked_notes
+    access: read
+    description: List notes linked directly to a contact, deal, investor, fundraising opportunity, company, or calendar event.
+  - name: list_notes_by_domain
+    access: read
+    description: List all notes related to a company domain, aggregated across the company and its contacts.
+  - name: search_tasks
+    access: read
+    description: Search tasks assigned to the current user, optionally filtered by completion state and entity type.
+  - name: list_tasks_by_entity
+    access: read
+    description: List tasks attached to a deal, note, contact, or fundraising opportunity.
+  - name: fetch_task_by_id
+    access: read
+    description: Return one task by ID — title, comment, due date, assignees, completion state.
+  - name: search_themes
+    access: read
+    description: Search themes by name.
+  - name: get_theme_items
+    access: read
+    description: List the entities linked to a theme, optionally filtered by folder.
+  - name: get_theme_folders
+    access: read
+    description: List a theme's folders, grouped by entity type (contact, company, deal, note, tag).
+  - name: get_adviser_profile
+    access: read
+    description: 'Single-call relationship summary for a bank, adviser, or external company: top contacts by interaction volume,
+      active deals, next meeting, recent notes.'
+  - name: fetch_contact_interactions_by_emails
+    access: read
+    description: Return the caller's past and upcoming interactions with contacts, looked up by email address.
+  - name: list_interactions_by_domain
+    access: read
+    description: List email and calendar interactions with contacts at a given domain.
+  - name: list_calendar_events
+    access: read
+    description: List organization-wide calendar events in a date window, deduplicated across teammates on the same event.
+  - name: get_company_angles
+    access: read
+    description: Return who in the caller's network can introduce them to employees at a target company, via shared-employer
+      paths.
+  - name: list_my_emails
+    access: read
+    description: List the caller's own emails from their connected Gmail or Outlook mailbox.
+  - name: get_my_email_by_id
+    access: read
+    description: Return the full body of one of the caller's own emails.
+  - name: list_reports
+    access: read
+    description: List saved reports for an entity type (contact, deal, fundraising, investor, company, fees).
+  - name: get_report
+    access: read
+    description: Return one saved report by ID, with its columns, filters, grid configuration, and URL.
+  - name: get_report_data
+    access: read
+    description: Run a report by ID and return the matching rows plus a total count.
+  - name: get_report_schedule
+    access: read
+    description: Return the caller's recurring email schedule for a deal report.
+  - name: list_email_campaigns
+    access: read
+    description: List the organization's email campaigns, newest first, optionally filtered by status.
+  - name: get_email_campaign
+    access: read
+    description: Return one email campaign by ID, including its current HTML.
+  - name: list_email_campaign_variables
+    access: read
+    description: List the merge tags available in campaign HTML — standard recipient variables plus eligible contact custom
+      fields.
+  - name: get_file_content
+    access: read
+    description: Download an attached file and return its text content (Office documents, PDFs, and plain text).
+  - name: get_fund_closings_status
+    access: read
+    description: Return closings readiness and the ledger URL for a batch of Carta funds.
+  - name: get_fund_closing_prospect_statuses
+    access: read
+    description: 'Return per-prospect subscription progress for one fund: contact state, KYC status, risk rating, commitment
+      amounts.'
+  - name: get_current_user
+    access: read
+    description: Return the user and tenant the session is operating as.
+  - name: list_organization_users
+    access: read
+    description: List every user in the organization — id, email, display name, role, status.
+  - name: list_organization_teams
+    access: read
+    description: List every team in the organization — id, name, description, member count.
+  - name: get_platform_how_to_guide
+    access: read
+    description: 'Return the Carta CRM how-to guide: how the platform works and where features live.'
+  - name: get_tenant_custom_instructions
+    access: read
+    description: Return the tenant-wide and personal agent instructions configured for this CRM.
+  - name: get_user_notification_settings
+    access: read
+    description: Return the caller's email notification settings — master switch and per-type toggles.
+  - name: objects_count
+    access: read
+    description: 'Count all objects across the tenant: contacts, deals, fundraisings, investors, notes.'
+  - name: contact_count
+    access: read
+    description: Count the contacts in a single list or saved contact report.
+  - name: create_contact
+    access: write
+    description: Create a contact, optionally adding it to a list, including the interaction frequency goal.
+  - name: update_contact
+    access: write
+    description: Update an existing contact by ID, including the interaction frequency goal; only supplied fields change.
+  - name: delete_contact
+    access: write
+    description: Delete a contact by ID.
+  - name: enrich_contact
+    access: write
+    description: Run the enrichment check against one existing contact on demand.
+  - name: enrich_contacts_bulk
+    access: write
+    description: Run enrichment for a batch of contacts in one call.
+  - name: add_contact_to_list
+    access: write
+    description: Add an existing contact to a list; existing list memberships are kept.
+  - name: create_contact_list
+    access: write
+    description: Create a contact list at the root of the workspace.
+  - name: update_contact_list
+    access: write
+    description: Rename a list, move it into a folder, or change its access permission.
+  - name: delete_contact_list
+    access: write
+    description: Delete a contact list. Contacts in the list are deleted with it.
+  - name: create_contact_folder
+    access: write
+    description: Create a folder for organizing contact lists.
+  - name: update_contact_folder
+    access: write
+    description: Rename a folder, nest it inside another, or change its access permission.
+  - name: delete_contact_folder
+    access: write
+    description: Delete a folder; its lists and sub-folders move to the root.
+  - name: update_contact_tags_classifier_prompt
+    access: write
+    description: Set or reset the organization's contact-tags classifier prompt.
+  - name: create_company
+    access: write
+    description: Create a company.
+  - name: update_company
+    access: write
+    description: Update an existing company by ID; only supplied fields change.
+  - name: delete_company
+    access: write
+    description: Delete a company by ID.
+  - name: create_deal
+    access: write
+    description: Create a deal; pipeline and stage default to the organization's defaults.
+  - name: update_deal
+    access: write
+    description: Update an existing deal by ID; only supplied fields change.
+  - name: delete_deal
+    access: write
+    description: Delete a deal by ID.
+  - name: update_deal_stage
+    access: write
+    description: Rename a deal stage or change its flags.
+  - name: reorder_deal_stage
+    access: write
+    description: Move a deal stage to a different position in its pipeline.
+  - name: create_fundraising
+    access: write
+    description: Create a fundraising opportunity; stage defaults to the first stage.
+  - name: update_fundraising
+    access: write
+    description: Update an existing fundraising opportunity by ID.
+  - name: delete_fundraising
+    access: write
+    description: Delete a fundraising opportunity by ID.
+  - name: update_fundraising_stage
+    access: write
+    description: Rename a fundraising stage or toggle its kanban visibility.
+  - name: reorder_fundraising_stage
+    access: write
+    description: Move a fundraising stage to a different position.
+  - name: initiate_fundraising_closing
+    access: write
+    description: Initiate — or return the existing — Fund Admin closing for the linked fund.
+  - name: send_fundraising_subscription_docs
+    access: write
+    description: Send subscription documents to a prospective investor on the linked fund.
+  - name: create_investor
+    access: write
+    description: Create an investor.
+  - name: update_investor
+    access: write
+    description: Update an existing investor by ID; only supplied fields change.
+  - name: delete_investor
+    access: write
+    description: Delete an investor by ID.
+  - name: create_fee
+    access: write
+    description: Create a fee.
+  - name: update_fee
+    access: write
+    description: Update an existing fee by ID; only supplied values change.
+  - name: delete_fee
+    access: write
+    description: Delete a fee by ID; the record moves to the organization's trash.
+  - name: create_note
+    access: write
+    description: Create a note, optionally placing it in a folder.
+  - name: update_note
+    access: write
+    description: Update an existing note by ID; only supplied fields change.
+  - name: delete_note
+    access: write
+    description: Delete a note by ID.
+  - name: link_note
+    access: write
+    description: Link a note to a contact, deal, investor, fundraising opportunity, company, or calendar event.
+  - name: unlink_note
+    access: write
+    description: Remove the association between a note and an entity.
+  - name: create_task
+    access: write
+    description: Create a task attached to a deal, note, contact, or fundraising opportunity.
+  - name: update_task
+    access: write
+    description: Update an existing task by ID; only supplied fields change.
+  - name: delete_task
+    access: write
+    description: Delete a task by ID.
+  - name: create_theme
+    access: write
+    description: Create a theme, or return the existing one if the name is taken.
+  - name: create_theme_item
+    access: write
+    description: Link an entity to a theme.
+  - name: delete_theme_item
+    access: write
+    description: Remove an entity link from a theme and clear the theme mention on the entity.
+  - name: add_subtheme
+    access: write
+    description: Make an existing theme a subtheme of another theme.
+  - name: remove_subtheme
+    access: write
+    description: Remove a subtheme link from a parent theme.
+  - name: create_report
+    access: write
+    description: Create a saved report with filters, group-by, and columns.
+  - name: update_report
+    access: write
+    description: Update a saved report's name, filters, group-by, pipeline scope, or columns.
+  - name: delete_report
+    access: write
+    description: Permanently delete a saved report; owner or admin only.
+  - name: create_report_schedule
+    access: write
+    description: Schedule a deal report to be emailed on a recurring basis.
+  - name: update_report_schedule
+    access: write
+    description: Update the recurrence rule, recipients, or active flag on a report schedule.
+  - name: delete_report_schedule
+    access: write
+    description: Remove the caller's recurring schedule for a deal report.
+  - name: create_email_campaign
+    access: write
+    description: Create a draft email campaign. Creating does not send it.
+  - name: update_email_campaign
+    access: write
+    description: Update a draft or failed campaign; a sent campaign may only be renamed.
+  - name: delete_email_campaign
+    access: write
+    description: Delete a campaign of any status; already-delivered emails are unaffected.
+  - name: get_signed_upload_url
+    access: write
+    description: Return a presigned S3 upload URL plus a file_id for the two-step upload-then-attach flow.
+  - name: attach_file_to_entity
+    access: write
+    description: Attach an uploaded file to a deal, investor, company, fundraising opportunity, or note.
+  - name: delete_file_from_entity
+    access: write
+    description: Remove an attached file from an entity and delete it from storage.
+  - name: generate_pdf_from_html
+    access: write
+    description: Render an HTML document to PDF and return a short-lived signed download URL.
+  - name: generate_csv_from_entities
+    access: write
+    description: Export investors, fundraisings, deals, contacts, or companies to CSV and return a signed download URL.
+  - name: create_custom_field
+    access: write
+    description: Add a custom field to a supported entity schema.
+  - name: update_custom_field
+    access: write
+    description: Partially update an existing custom field.
+  - name: reorder_custom_field
+    access: write
+    description: Change a field's position in an entity's field list.
+  - name: delete_custom_field
+    access: write
+    description: Delete a custom field from an entity schema.
+  - name: update_user_notification_settings
+    access: write
+    description: Change the caller's email notification settings — master switch and per-type toggles.
+  - name: product_support_hotline
+    access: write
+    description: Send a bug report, feature request, data issue, or other feedback to the CRM product team.
+plugins_doc: https://docs.carta.com/api-platform/guides/guides/claude-mcp-setup

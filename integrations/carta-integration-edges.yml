@@ -1,44 +1,22 @@
-generated: '2026-10-14'
+generated: '2026-10-20'
 method: searched
+source:
+- bamboohr/integrations/bamboohr-integration-edges.yml
+- https://zapier.com/apps/carta/integrations
+- https://n8n.io/integrations/carta/
+- https://composio.dev/toolkits/carta
+- https://monid.ai/tools/carta
 checked:
 - bamboohr/integrations/bamboohr-integration-edges.yml
 - https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv
 - zoom/integrations/zoom-integration-edges.yml
-source:
-- bamboohr/integrations/bamboohr-integration-edges.yml
+- https://composio.dev/toolkits/carta
+- https://monid.ai/tools/carta
+- https://n8n.io/integrations/carta/
+- https://zapier.com/apps/carta/integrations
+summary: null
+marketplace_apps: []
 edges:
-- partner_name: ISO 10383 (MIC)
-  partner: null
-  type: register
-  channel: standard-directory
-  relationship: standard-participant
-  direction: partner-built
-  evidence: https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv
-  source: mic
-  category: registered trading venues and market segments
-  contract_reference:
-    register: ISO 10383 Market Identifier Codes (ISO 20022 registration authority)
-    spec_file: null
-    standard: ISO 10383
-    role: venue operator
-    matched_domain: carta.com
-    matched_by: domain:carta.com
-    categories:
-    - NSPD
-    operating_mics:
-    - CCMX
-    mics:
-    - mic: CCMX
-      operating_mic: CCMX
-      segment: OPRT
-      market: CARTAX
-      category: NSPD
-      legal_name: CARTA CAPITAL MARKETS, LLC
-      country: US
-    detected_by: sweep-capital-markets.py
-    detected: '2026-10-15'
-  detected_by: sweep-capital-markets.py
-  first_seen: '2026-10-15'
 - partner_name: BambooHR (own)
   partner: bamboohr
   partner_match: mirror
@@ -73,3 +51,36 @@ edges:
   detected: '2026-10-18'
   detected_by: mirror-platform-listings.py
   category: Zoom app
+- partner_name: ISO 10383 (MIC)
+  partner: null
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv
+  source: mic
+  category: registered trading venues and market segments
+  contract_reference:
+    register: ISO 10383 Market Identifier Codes (ISO 20022 registration authority)
+    spec_file: null
+    standard: ISO 10383
+    role: venue operator
+    matched_domain: carta.com
+    matched_by: domain:carta.com
+    categories:
+    - NSPD
+    operating_mics:
+    - CCMX
+    mics:
+    - mic: CCMX
+      operating_mic: CCMX
+      segment: OPRT
+      market: CARTAX
+      category: NSPD
+      legal_name: CARTA CAPITAL MARKETS, LLC
+      country: US
+    detected_by: sweep-capital-markets.py
+    detected: '2026-10-19'
+  detected_by: sweep-capital-markets.py
+  first_seen: '2026-10-19'
+templates: []

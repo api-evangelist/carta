@@ -1,0 +1,6 @@
+name: Carta agent skills
+generated: '2026-10-20'
+method: generated
+skills:
+  - skills/carta-list-fund-investments.md
+  - skills/carta-book-capital-call.md

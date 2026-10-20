@@ -1,0 +1,19 @@
+name: Carta authentication
+generated: '2026-10-20'
+method: searched
+source: https://docs.carta.com/api-platform/guides/guides/authorization
+docs: https://docs.carta.com/api-platform/guides/guides/authorization
+schemes:
+- type: oauth2
+  flows:
+  - authorizationCode
+  - clientCredentials
+  description: Carta's API uses the OAuth 2.0 open specification ... supports AUTHORIZATION_CODE and CLIENT_CREDENTIALS grant
+    types.
+  token_lifetime: An access token is valid for one hour
+  authorization_code_ttl: valid for 60 seconds
+- type: openIdConnect
+  docs: https://docs.carta.com/api-platform/guides/references/using-openid-connect
+  note: Playground supports API access using OAuth 2.0 and OpenID Connect.
+scope_example: read_investor_firms
+note: Production OAuth apps are immutable once deployed; new scopes go through the playground-to-production flow (https://docs.carta.com/api-platform/guides/guides/adding-new-oauth-scopes).
