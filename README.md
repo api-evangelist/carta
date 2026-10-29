@@ -64,49 +64,150 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Carta is an equity management platform offering a REST API for cap table management, 409A valuations, fund administration, employee equity plans, and investor portfolio management. Carta's Developer Platform exposes five API suites — Launch, Investor, Issuer, Portfolio, and CRM — authenticated via OAuth 2.0.
+Carta is an equity management platform offering a REST API for cap table management, 409A valuations, fund administration, employee equity plans, and investor portfolio management. Carta's Developer Platform exposes four API suites — Launch, Investor, Issuer, and Portfolio — authenticated via OAuth 2.0 (Authorization Code and Client Credentials flows). Partner access is invite-only and requires SOC 2 Type 2 certification; Carta customers may request access to their own data on demand. A mock API environment at mock-api.carta.com is provided for sandbox development.
 
-## API Suites
+**Areas:** Equity Management · Cap Table · 409A Valuations · Fund Administration · Employee Equity · Investor Portfolio · Private Markets · Fintech · Startups
 
-| API | Purpose |
-|-----|---------|
-| Launch | Incorporation partners and law firms onboard new companies programmatically |
-| Investor | Fund operators retrieve cap table summaries and portfolio position data |
-| Issuer | Law firms and tech partners access cap table data on behalf of companies |
-| Portfolio | Personal finance platforms aggregate individual equity holdings |
-| CRM | Deal and fundraising relationship management for fund operators |
+## Carta on APIs.io
 
-## Authentication
+Everything profiled for Carta is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/carta/](https://apis.io/providers/carta/)** — or go straight to one of the APIs or properties below.
 
-OAuth 2.0 is the primary authentication method, supporting:
-- Authorization Code Flow (user-delegated access)
-- Client Credentials Flow (service-to-service)
-- OpenID Connect
+### APIs (6)
 
-## Access Model
+- [Carta Launch API](https://apis.io/apis/carta/launch-api/) — Enables incorporation partners and law firms to programmatically onboard new companies onto the Carta platform, streamlining the company formation and cap…
+- [Carta Investor API](https://apis.io/apis/carta/investor-api/) — Permits fund operators to retrieve cap table summaries and portfolio position data for their holdings, enabling downstream analytics, reporting, and…
+- [Carta Issuer API](https://apis.io/apis/carta/issuer-api/) — Allows law firms and technology partners to retrieve cap table data on behalf of companies, supporting legal workflows, equity issuance, and 409A valuation…
+- [Carta Portfolio API](https://apis.io/apis/carta/portfolio-api/) — Enables personal finance and wealth management platforms to aggregate equity holdings data for individuals, supporting estate planning, tax preparation,…
+- [Carta CRM API](https://apis.io/apis/carta/crm-api/) — Facilitates deal and fundraising relationship management across investment processes for fund operators, providing structured access to CRM data within the…
+- [Carta API](https://apis.io/apis/carta/carta-api/) — Carta API as documented publicly: 40 operations. Contract generated from the documentation by API Evangelist (2026-10-20); not the provider's own document.
 
-Partner API access is invite-only and requires a valid SOC 2 Type 2 certification. Carta customers (companies and investment firms) may request access to their own data on demand.
+### Published properties
 
-A sandbox/mock environment is available at `https://mock-api.carta.com` without production credentials.
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## Rate Limits
+#### MCP servers (1)
 
-| Environment | Burst | Sustained |
-|-------------|-------|-----------|
-| Sandbox | 5 req/s | 150 req/min |
-| Production | Per partner agreement | Per partner agreement |
+Model Context Protocol servers that expose the API to agents.
 
-## Links
+- [carta](https://apis.io/servers/carta/carta/)
 
-- Website: https://carta.com
-- Developer Platform: https://carta.com/api/
-- Documentation: https://docs.carta.com/api-platform/docs/introduction
-- GitHub: https://github.com/carta
-- LinkedIn: https://www.linkedin.com/company/carta--
-- Blog: https://carta.com/blog/
-- Status Page: https://status.carta.com
-- Pricing: https://carta.com/plans/pricing-for-investors/
+#### JSON Schema (6)
 
-## APIs.json
+The data models the API reads and writes.
 
-This repository contains an [APIs.json](apis.yml) index conforming to specification version 0.19.
+- [GetV1Alpha1IssuersIssueridTransactionsResponse](https://apis.io/schemas/carta/carta-get-v1-alpha1-issuers-issuerid-transactions-response/)
+- [PostV1Alpha1InvestorsFirmsFirmidFundsFundidCapitalcallsReque](https://apis.io/schemas/carta/carta-post-v1-alpha1-investors-firms-firmid-funds-fundid-capitalcalls-reque/)
+- [PostV1Alpha1InvestorsFirmsFirmidFundsFundidCapitalcallsRespo](https://apis.io/schemas/carta/carta-post-v1-alpha1-investors-firms-firmid-funds-fundid-capitalcalls-respo/)
+- [PostV1Alpha1InvestorsFirmsFirmidFundsFundidManagementfeesReq](https://apis.io/schemas/carta/carta-post-v1-alpha1-investors-firms-firmid-funds-fundid-managementfees-req/)
+- [PostV1Alpha1InvestorsFirmsFirmidFundsFundidManagementfeesRes](https://apis.io/schemas/carta/carta-post-v1-alpha1-investors-firms-firmid-funds-fundid-managementfees-res/)
+- [PostV1Alpha1IssuersIssueridSecuritiesStocksplitchangesRespon](https://apis.io/schemas/carta/carta-post-v1-alpha1-issuers-issuerid-securities-stocksplitchanges-respon/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Carta Context](https://apis.io/jsonld/carta/carta-context/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Carta API Rules](https://apis.io/rules/carta/carta-rules/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Carta Authentication](https://apis.io/security/carta/carta-authentication/)
+- [Carta Domain Security](https://apis.io/security/carta/carta-domain-security/)
+- [Carta Trust Center](https://apis.io/security/carta/carta-trust-center/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Carta Plans Pricing](https://apis.io/plans/carta/carta-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Carta Rate Limits](https://apis.io/rate-limits/carta/carta-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Carta Finops](https://apis.io/finops/carta/carta-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://carta.com)
+- [Documentation](https://docs.carta.com/api-platform/guides/getting-started/introduction)
+- [Getting started](https://docs.carta.com/api-platform/guides/getting-started/quickstart-guide)
+- [API reference](https://docs.carta.com/api-platform/reference/v-1-alpha-1-draft-issuers-create-draft-issuer)
+- [Pricing](https://carta.com/plans/pricing-for-investors/)
+- [Support](https://docs.carta.com/api-platform/guides/references/faq-and-support)
+- [Blog](https://carta.com/blog/)
+- [Security](https://carta.com/security/generative-ai-at-carta/)
+- [Compliance](https://trust.carta.com/)
+- [Terms of service](https://carta.com/terms-of-service/)
+- [Privacy policy](https://carta.com/privacy/)
+- [Status](https://status.carta.com)
+
+## API Evangelist rating
+
+**Kin Score 49.3** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 76.7 |
+| Contract quality | 23.7 |
+| Contract governance | 22.0 |
+| Operational transparency | 52.6 |
+| Developer ergonomics | 51.8 |
+| Access clarity | 68.4 |
+
+**Agent readiness 49.5** — agent-ready (gated down from agent-native)
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | verified |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | yes |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | verified |
+| Dynamic Client Registration | yes |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 29.4** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/carta/](https://apis.io/providers/carta/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Carta: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/carta/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
